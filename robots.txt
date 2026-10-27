@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://zaboubob.github.io/boris-zablot/sitemap.xml

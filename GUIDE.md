@@ -1,17 +1,21 @@
 # Site personnel de Boris Zablot
 
-Site statique sans dépendance. Ouvrir index.html pour le consulter.
+Site statique sans compilation : index.html, assets/style.css, portraits WebP et pages dans projets/.
 
-## Publication GitHub Pages
-Dans Settings → Pages, sélectionner Deploy from a branch, puis main et / (root). L’adresse attendue après publication est https://zaboubob.github.io/boris-zablot/ ; vérifier le résultat dans GitHub avant de partager le lien.
+## Design
+Fond anthracite, rouge, grandes typographies condensées, portraits noir et blanc et navigation par sections. Aucun logo ni contenu F1 réutilisé.
+
+## Publication
+GitHub Pages depuis main / (root). Adresse : https://zaboubob.github.io/boris-zablot/
 
 ## Ajouter un projet
-Copier projets/site-personnel.html, remplacer le titre, la description et le contenu. Ajouter un lien vers la nouvelle page dans la section projets de index.html. Présenter le contexte, le rôle personnel, la démarche et les résultats vérifiables. Ne publier aucune donnée confidentielle.
+Dupliquer projets/site-personnel.html et adapter titre, description, URL canonique et contenu. Ajouter sa carte dans index.html et son URL dans sitemap.xml. Décrire le contexte, le rôle, la démarche et des résultats vérifiables. Ne pas publier de données confidentielles.
 
-## À compléter
-- Lien LinkedIn exact et coordonnées publiques souhaitées.
-- Photo professionnelle avec autorisation de diffusion.
-- Présentations détaillées des projets choisis.
+## Contenu
+Parcours enrichi depuis le PDF LinkedIn fourni le 27 octobre 2026. Les descriptions tronquées dans le PDF n’ont pas été extrapolées. Le PDF complet, les statistiques privées LinkedIn et les suggestions de contacts ne sont pas publiés.
 
-## Référencement après publication
-Ajouter les URL canoniques et un sitemap XML à partir de l’adresse publique définitive. Relier le site depuis LinkedIn. Vérifier la propriété dans Google Search Console et demander l’indexation. Aucun classement Google n’est garanti.
+## Référencement
+Titres, descriptions, données Person / sameAs, URL canoniques, sitemap.xml, robots.txt et métadonnées sociales. En cas de changement de domaine, remplacer les URL absolues dans ces fichiers. Ajouter le site à LinkedIn et vérifier la propriété dans Google Search Console pour demander l’indexation. Aucun classement garanti.
+
+## Polices
+Barlow et Barlow Condensed via Google Fonts, avec polices de secours locales.
