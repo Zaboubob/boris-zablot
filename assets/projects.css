@@ -58,3 +58,18 @@
 .project-carousel-controls button:disabled{opacity:.35;cursor:default}
 @media(max-width:800px){.project-track{gap:22px;grid-auto-columns:calc((100% - 22px)/2)}}
 @media(max-width:600px){.project-track{grid-auto-columns:92%;gap:18px}.project-carousel-hint{max-width:190px;font-size:12px}.project-carousel-footer{gap:12px}}
+
+/* Featured carousel: one project per slide, with prominent controls above. */
+#projets .project-track{grid-auto-columns:100%;gap:24px}
+#projets .project-track .project-card{display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
+#projets .project-track .project-card:hover{transform:none}
+#projets .project-track .project-card-media{aspect-ratio:auto;min-height:340px}
+#projets .project-track .project-card-media img{position:absolute;inset:0}
+#projets .project-track .project-content{padding:36px}
+.project-carousel-footer{margin:0 0 24px;flex-wrap:wrap}
+.project-carousel-controls{align-items:center}
+.project-carousel-controls button{display:flex;justify-content:center;gap:12px;width:auto;min-height:48px;height:auto;padding:12px 20px;border-radius:4px;font-family:inherit;font-size:14px;border-color:#777782}
+.project-carousel-controls button span[aria-hidden]{font-size:24px;line-height:1}
+.project-carousel-count{min-width:54px;text-align:center;font-size:14px;font-variant-numeric:tabular-nums;color:var(--paper)}
+@media(max-width:800px){#projets .project-track .project-content{padding:24px}#projets .project-track .project-card-media{min-height:320px}}
+@media(max-width:600px){#projets .project-track .project-card{grid-template-columns:1fr}#projets .project-track .project-card-media{aspect-ratio:16/9;min-height:0}.project-carousel-controls{width:100%;justify-content:space-between;gap:8px}.project-carousel-controls button{padding:10px 12px}.project-carousel-hint{max-width:none}}

@@ -275,8 +275,8 @@ def _generate_locale(projects, registry, language='fr', translated_ids=None):
     carousel = carousel_template.substitute(
         cards='\n'.join(cards),
         gallery_label='Projects' if english else 'Projets',
-        previous_label='Previous projects' if english else 'Projets précédents',
-        next_label='Next projects' if english else 'Projets suivants',
+        previous_label='Previous' if english else 'Précédent',
+        next_label='Next' if english else 'Suivant',
         hint='Swipe or use the arrows to explore' if english else 'Faites défiler pour découvrir les projets',
         script_prefix='../' if english else '')
     output['en/index.html' if english else 'index.html'] = before + START + '\n' + carousel + note + '\n' + END + after
