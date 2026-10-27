@@ -1,0 +1,77 @@
+{
+  "id": "site-personnel",
+  "number": 1,
+  "slug": "site-personnel",
+  "order": 10,
+  "title": "Un espace à mon nom",
+  "category": "Identité numérique",
+  "status": "En cours",
+  "teaser": "Construire un site qui prolonge mon parcours professionnel, documente mes projets et donne une place à mes idées comme à mes apprentissages.",
+  "chapo": "Créer un espace personnel pour relier mon expérience en finance, mon intérêt pour la technologie et les projets que je souhaite partager, avec la liberté de les raconter à ma façon.",
+  "image": {
+    "src": "assets/projets/site-personnel-bz.png",
+    "alt": "Monogramme BZ. blanc cassé sur fond rouge, identité visuelle du site de Boris Zablot",
+    "width": 1600,
+    "height": 900,
+    "focal": [
+      50,
+      50
+    ]
+  },
+  "role": "Créateur du site personnel",
+  "domains": [
+    "Identité numérique",
+    "Finance",
+    "Technologie"
+  ],
+  "sections": {
+    "start": [
+      {
+        "type": "paragraph",
+        "text": "LinkedIn raconte une partie de mon parcours, mais un profil professionnel ne laisse pas toujours la place d’expliquer ce que l’on construit. Je souhaitais disposer d’un espace où présenter mon expérience et donner davantage de contexte aux projets que je choisis de partager."
+      },
+      {
+        "type": "paragraph",
+        "text": "Mon parcours en finance et mon intérêt pour la technologie constituent le point de départ de ce site. L’idée est de les réunir dans un même espace, tout en laissant une place aux sujets et aux apprentissages qui viendront ensuite."
+      }
+    ],
+    "objective": [
+      {
+        "type": "paragraph",
+        "text": "L’objectif est de créer une vitrine personnelle qui prolonge mon parcours professionnel sans se limiter à un CV. Les visiteurs doivent pouvoir comprendre mon approche, parcourir mes expériences et explorer mes projets à leur rythme."
+      },
+      {
+        "type": "paragraph",
+        "text": "Chaque projet doit aussi disposer de sa propre page : un endroit pour raconter son contexte, expliquer les choix effectués et partager ce qui en ressort. Le site est lui-même le premier projet présenté dans cet espace."
+      }
+    ],
+    "approach": [
+      {
+        "type": "paragraph",
+        "text": "La première étape a consisté à poser une identité visuelle commune. Les portraits en noir et blanc, le fond sombre, le blanc cassé et les accents rouges donnent une continuité aux différentes parties du site."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Présenter le parcours et les domaines d’intervention avec une hiérarchie lisible.",
+          "Donner aux projets des cartes visuelles et des pages dédiées, avec une structure cohérente.",
+          "Conserver une base statique légère, versionnée sur GitHub et adaptée au mobile."
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Le contenu et la présentation des projets sont désormais séparés. Une même structure permet de décrire leur point de départ, leur objectif, leur démarche et leur bilan. Cette organisation doit permettre d’enrichir le site sans redessiner chaque nouvelle page."
+      }
+    ],
+    "outcome": [
+      {
+        "type": "paragraph",
+        "text": "Le site rassemble aujourd’hui une présentation de mon parcours, mes domaines d’intervention et un espace pour les projets. Il donne un cadre à ce que je souhaite partager et un point d’entrée complémentaire à mon profil LinkedIn."
+      },
+      {
+        "type": "paragraph",
+        "text": "La suite consiste à enrichir cet espace au fil des projets, avec des explications concrètes sur leur contexte et leur développement. Le contenu pourra évoluer avec mes idées et mes apprentissages, en gardant une présentation homogène et facile à parcourir."
+      }
+    ]
+  }
+}

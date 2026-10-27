@@ -1,6 +1,6 @@
 # Site personnel de Boris Zablot
 
-Site statique sans compilation : index.html, assets/style.css, portraits WebP et pages dans projets/.
+Site statique : index.html, assets/style.css, portraits WebP et pages projets générées sans dépendance Python externe.
 
 ## Design
 Fond anthracite, rouge, grandes typographies condensées, portraits noir et blanc et navigation par sections. Aucun logo ni contenu F1 réutilisé.
@@ -9,7 +9,10 @@ Fond anthracite, rouge, grandes typographies condensées, portraits noir et blan
 GitHub Pages depuis main / (root). Adresse : https://zaboubob.github.io/boris-zablot/
 
 ## Ajouter un projet
-Dupliquer projets/site-personnel.html et adapter titre, description, URL canonique et contenu. Ajouter sa carte dans index.html et son URL dans sitemap.xml. Décrire le contexte, le rôle, la démarche et des résultats vérifiables. Ne pas publier de données confidentielles.
+
+Remplir une fiche JSON dans `content/projects/` et fournir son visuel. Les modèles partagés génèrent les cartes et pages. Voir [le guide des projets](docs/PROJETS.md) et [la fiche prête à remplir](docs/projet-exemple.json).
+
+Commande : `python3 scripts/build_projects.py`. La génération est aussi intégrée au workflow GitHub, en conservant la publication Pages depuis main.
 
 ## Contenu
 Parcours enrichi depuis le PDF LinkedIn fourni le 27 octobre 2026. Les descriptions tronquées dans le PDF n’ont pas été extrapolées. Le PDF complet, les statistiques privées LinkedIn et les suggestions de contacts ne sont pas publiés.
@@ -19,3 +22,4 @@ Titres, descriptions, données Person / sameAs, URL canoniques, sitemap.xml, rob
 
 ## Polices
 Barlow et Barlow Condensed via Google Fonts, avec polices de secours locales.
+

@@ -1,0 +1,66 @@
+name: Générer les projets
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'content/**'
+      - 'templates/**'
+      - 'scripts/**'
+      - 'tests/**'
+      - 'assets/projets/**'
+      - 'assets/projects.css'
+      - 'index.html'
+      - 'projets/**'
+      - '.github/workflows/projects.yml'
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: projects-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 -m unittest discover -s tests
+      - run: python3 scripts/build_projects.py --validate
+      - if: github.event_name == 'pull_request'
+        run: python3 scripts/build_projects.py --check
+
+  generate:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: validate
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 scripts/build_projects.py
+      - run: python3 scripts/build_projects.py --check
+      - name: Enregistrer les sorties et reconstruire Pages si nécessaire
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git add -A -- index.html projets sitemap.xml content/project-registry.json
+          if ! git diff --cached --quiet; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git commit -m 'Générer les cartes et pages projets'
+            git push origin HEAD:main
+            gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds" --silent
+          fi

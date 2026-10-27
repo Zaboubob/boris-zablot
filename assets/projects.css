@@ -1,0 +1,44 @@
+/* Shared by the generated homepage cards and every project page. */
+#projets .project-grid{grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch;gap:32px}
+#projets .project-card{display:flex;flex-direction:column;min-width:0;border-radius:0 34px 0 0;transition:border-color .2s,transform .2s;overflow:hidden}
+#projets .project-card:hover{border-color:var(--red);transform:translateY(-4px);color:var(--paper)}
+#projets .project-card:focus-visible{outline:3px solid var(--paper);outline-offset:5px;border-color:var(--red)}
+.project-card-media{position:relative;aspect-ratio:16/9;overflow:hidden;background:var(--panel)}
+.project-card-media img{width:100%;height:100%;object-fit:cover}
+.project-number{position:absolute;top:18px;left:20px;background:#17171eeb;color:var(--paper);padding:7px 11px;font-size:11px;letter-spacing:1.2px;text-transform:uppercase}
+#projets .project-content{display:flex;flex-direction:column;flex:1;padding:28px;min-width:0}
+.project-meta{display:flex;gap:10px 18px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
+.project-status{display:inline-block;border:1px solid #676773;padding:4px 9px;border-radius:20px;font-size:11px;line-height:1.4;white-space:nowrap;color:var(--paper)}
+#projets .project-content h3{font-size:clamp(30px,3vw,40px);line-height:1.05;margin:22px 0 16px;overflow-wrap:anywhere}
+#projets .project-content p{margin:0 0 28px;line-height:1.65;max-width:none;overflow-wrap:anywhere}
+#projets .project-link{margin-top:auto;padding-top:20px;color:var(--paper)}
+#projets .project-note{align-self:center}
+.project-intro{padding-block:72px 44px}
+.project-kicker{display:flex;flex-wrap:wrap;align-items:center;gap:12px 22px;text-transform:uppercase;letter-spacing:1.5px;font-size:12px;color:var(--muted)}
+.project-kicker>span:first-child{color:#ff6478}
+.project-intro h1{font-size:clamp(54px,8vw,112px);line-height:1.02;max-width:1030px;letter-spacing:-1.5px;margin:26px 0;overflow-wrap:anywhere}
+.project-deck{font-size:clamp(19px,2.2vw,25px);line-height:1.55;max-width:850px;color:var(--muted);margin:0}
+.project-cover{padding:0;margin-block:0 0;overflow:hidden;border-top:4px solid var(--red);border-radius:0 48px 0 0;background:var(--panel)}
+.project-cover img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.project-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:25px;margin-block:0 0;padding:28px 0;border-bottom:1px solid var(--line)}
+.project-facts dt{color:var(--muted);font-size:11px;letter-spacing:1.5px;text-transform:uppercase}
+.project-facts dd{margin:8px 0 0;font-size:15px;overflow-wrap:anywhere}
+.project-article{width:min(760px,calc(100% - 96px));margin:70px auto}
+.project-article section{padding:0;margin:0 0 46px;border:0}
+.project-article h2{font-size:clamp(33px,4vw,45px);line-height:1.1;margin-bottom:22px;letter-spacing:0}
+.project-article p,.project-article li{color:var(--muted);font-size:18px;line-height:1.8;overflow-wrap:anywhere}
+.project-article p{margin-bottom:18px}.project-article ul{padding-left:22px}.project-article li+li{margin-top:10px}
+.project-extra{margin:42px 0}.project-extra img{width:100%;height:auto;border-radius:0 28px 0 0}
+.project-extra figcaption{font-size:13px;line-height:1.6;color:var(--muted);margin-top:12px}
+.project-highlight{border-left:4px solid var(--red);background:var(--panel);padding:28px 30px;margin:40px 0}
+.project-highlight h2{font-size:27px}.project-highlight p:last-child{margin-bottom:0}
+.project-end{padding-block:34px 70px;border-top:1px solid var(--line)}
+.project-related{margin-top:48px}.project-related h2{font-size:30px;margin:0 0 22px}
+.project-related-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.project-related-links a{display:flex;justify-content:space-between;gap:22px;align-items:center;border:1px solid var(--line);padding:23px;font-size:18px}
+.project-related-links a:hover{border-color:var(--red);color:var(--paper)}
+.project-related-links span:first-child{overflow-wrap:anywhere}.project-page footer{border-top:1px solid var(--line)}
+.project-page a:focus-visible{outline:3px solid var(--paper);outline-offset:5px}
+@media(max-width:800px){#projets .project-grid{gap:22px}#projets .project-content{padding:23px}.project-article{width:calc(100% - 48px)}.project-intro{padding-top:50px}.project-cover{border-radius:0 30px 0 0}}
+@media(max-width:600px){#projets .project-grid{grid-template-columns:minmax(0,1fr)}#projets .project-note{margin:8px 0 0;padding:24px 0}.project-number{top:12px;left:12px}.project-intro{padding-block:38px 30px}.project-intro h1{font-size:clamp(48px,12vw,70px);letter-spacing:-.5px}.project-kicker{font-size:10px;gap:9px 13px}.project-deck{font-size:19px}.project-facts{grid-template-columns:1fr;padding-block:24px;gap:20px}.project-article{width:calc(100% - 36px);margin-block:44px}.project-article p,.project-article li{font-size:17px}.project-highlight{padding:22px}.project-related-links{grid-template-columns:1fr}.project-end{padding-bottom:45px}}
+@media(prefers-reduced-motion:reduce){#projets .project-card{transition:none}#projets .project-card:hover{transform:none}}

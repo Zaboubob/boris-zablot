@@ -1,0 +1,24 @@
+{
+  "id": "mon-prochain-projet",
+  "number": 2,
+  "slug": "mon-prochain-projet",
+  "order": 20,
+  "title": "",
+  "category": "",
+  "status": "En cours",
+  "teaser": "",
+  "chapo": "",
+  "image": {"src": "assets/projets/mon-prochain-projet.webp", "alt": "", "width": 0, "height": 0, "focal": [50, 50]},
+  "hero_image": null,
+  "role": null,
+  "period": null,
+  "domains": null,
+  "sections": {
+    "start": [{"type": "paragraph", "text": ""}],
+    "objective": [{"type": "paragraph", "text": ""}],
+    "approach": [{"type": "paragraph", "text": ""}],
+    "outcome": [{"type": "paragraph", "text": ""}]
+  },
+  "additional_image": null,
+  "highlight": null
+}
