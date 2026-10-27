@@ -1,0 +1,97 @@
+{
+  "id": "subventions-2026",
+  "number": 2,
+  "slug": "subventions-2026",
+  "order": 20,
+  "title": "Dossiers de subvention 2026",
+  "category": "Finance",
+  "status": "Terminé",
+  "role": "Pilotage intégral des dossiers",
+  "period": "Exercice fiscal 2026",
+  "teaser": "Trois dossiers menés à bien et 102 500 $ de subventions obtenues pour soutenir l’exportation et la transformation numérique d’Active Media.",
+  "chapo": "Du montage des dossiers aux projections financières et à leur présentation, j’ai piloté trois demandes de subvention pour soutenir le développement international et la transformation numérique d’Active Media.",
+  "image": {
+    "src": "assets/projets/subventions-2026.webp",
+    "alt": "Trois dossiers de subvention validés illustrant les programmes PSCE, CanExport et ESSOR en 2026.",
+    "width": 1600,
+    "height": 900,
+    "focal": [
+      50,
+      50
+    ]
+  },
+  "sections": {
+    "start": [
+      {
+        "type": "paragraph",
+        "text": "Développer de nouveaux marchés et faire évoluer les processus internes demandent du temps et des ressources. Pour Active Media, l’enjeu était de mobiliser les aides adaptées à ces ambitions et de construire des dossiers solides pour les obtenir."
+      },
+      {
+        "type": "paragraph",
+        "text": "En 2026, j’ai mené trois démarches distinctes : le PSCE pour soutenir nos efforts commerciaux en Europe, CanExport pour accompagner notre développement en Amérique latine et ESSOR pour préparer la transformation numérique de l’entreprise."
+      }
+    ],
+    "objective": [
+      {
+        "type": "paragraph",
+        "text": "Obtenir des subventions directement liées aux projets de l’entreprise, avec des budgets cohérents et une présentation claire des actions envisagées. Chaque dossier devait traduire une ambition en un projet structuré : définir le périmètre, modéliser les dépenses et expliquer les besoins."
+      },
+      {
+        "type": "paragraph",
+        "text": "J’ai assuré le pilotage de ces démarches, de la préparation des demandes à leur présentation et à leur suivi. Pour ESSOR, le travail comprenait également une contribution au diagnostic réalisé avec le consultant retenu."
+      }
+    ],
+    "approach": [
+      {
+        "type": "paragraph",
+        "text": "PSCE — Soutenir l’exportation en Europe"
+      },
+      {
+        "type": "paragraph",
+        "text": "Monté et présenté au deuxième trimestre 2026, le dossier PSCE a permis d’obtenir 47 500 $ de subvention. J’ai modélisé le projet, préparé les éléments financiers et soutenu sa présentation."
+      },
+      {
+        "type": "paragraph",
+        "text": "Cette aide accompagne les efforts de vente et de marketing d’Active Media sur le marché européen. Elle contribue notamment à couvrir des dépenses salariales liées au développement commercial."
+      },
+      {
+        "type": "paragraph",
+        "text": "ESSOR — Préparer la transformation numérique"
+      },
+      {
+        "type": "paragraph",
+        "text": "Le premier volet ESSOR a permis d’obtenir 20 000 $ pour accompagner la démarche de transformation numérique de l’entreprise."
+      },
+      {
+        "type": "paragraph",
+        "text": "Au-delà du montage du dossier et des projections financières, j’ai participé à la rédaction d’un diagnostic d’environ 100 pages avec le consultant retenu. Ce travail dresse un état des lieux des processus et des outils, identifie les points d’amélioration et formule des recommandations pour faire évoluer les solutions utilisées."
+      },
+      {
+        "type": "paragraph",
+        "text": "CanExport — Accompagner le développement en Amérique latine"
+      },
+      {
+        "type": "paragraph",
+        "text": "Une troisième demande, consacrée au développement d’Active Media en Amérique latine, a permis d’obtenir 35 000 $ dans le cadre de CanExport. Ce dossier soutient une démarche d’exportation sur un territoire distinct du projet européen."
+      }
+    ],
+    "outcome": [
+      {
+        "type": "paragraph",
+        "text": "Ces trois dossiers représentent 102 500 $ CA de subventions obtenues pour accompagner deux axes concrets : le développement international et la transformation numérique."
+      },
+      {
+        "type": "paragraph",
+        "text": "Ils illustrent une dimension opérationnelle de mon rôle en finance : identifier les dispositifs pertinents, structurer les projets, préparer les projections et porter les demandes jusqu’à leur aboutissement."
+      },
+      {
+        "type": "paragraph",
+        "text": "La suite se poursuit avec une candidature au deuxième volet ESSOR, dans le prolongement du diagnostic. Cette demande reste en cours et son financement éventuel n’est pas inclus dans le montant présenté."
+      }
+    ]
+  },
+  "highlight": {
+    "title": "102 500 $ CA de subventions obtenues",
+    "text": "3 programmes : PSCE · ESSOR · CanExport"
+  }
+}

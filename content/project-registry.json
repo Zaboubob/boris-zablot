@@ -1,8 +1,10 @@
 {
   "identities": {
-    "site-personnel": 1
+    "site-personnel": 1,
+    "subventions-2026": 2
   },
   "pages": [
-    "projets/site-personnel.html"
+    "projets/site-personnel.html",
+    "projets/subventions-2026.html"
   ]
 }
