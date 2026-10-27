@@ -42,3 +42,19 @@
 @media(max-width:800px){#projets .project-grid{gap:22px}#projets .project-content{padding:23px}.project-article{width:calc(100% - 48px)}.project-intro{padding-top:50px}.project-cover{border-radius:0 30px 0 0}}
 @media(max-width:600px){#projets .project-grid{grid-template-columns:minmax(0,1fr)}#projets .project-note{margin:8px 0 0;padding:24px 0}.project-number{top:12px;left:12px}.project-intro{padding-block:38px 30px}.project-intro h1{font-size:clamp(48px,12vw,70px);letter-spacing:-.5px}.project-kicker{font-size:10px;gap:9px 13px}.project-deck{font-size:19px}.project-facts{grid-template-columns:1fr;padding-block:24px;gap:20px}.project-article{width:calc(100% - 36px);margin-block:44px}.project-article p,.project-article li{font-size:17px}.project-highlight{padding:22px}.project-related-links{grid-template-columns:1fr}.project-end{padding-bottom:45px}}
 @media(prefers-reduced-motion:reduce){#projets .project-card{transition:none}#projets .project-card:hover{transform:none}}
+
+/* Horizontal project catalogue: two cards on desktop, one on mobile. */
+#projets .project-grid{display:block}
+.project-track{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 32px)/2);gap:32px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:var(--red) var(--panel);padding:6px 6px 18px;margin:-6px -6px 0;scroll-padding-inline:6px}
+#projets .project-track .project-card{scroll-snap-align:start;scroll-margin-inline:6px;min-width:0}
+.project-track:focus-visible{outline:3px solid var(--paper);outline-offset:5px}
+.project-carousel-footer{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:20px}
+.project-carousel-hint{font-size:13px;color:var(--muted);margin:0}
+.project-carousel-controls{display:flex;gap:10px;flex-shrink:0}
+.project-carousel-controls[hidden]{display:none}
+.project-carousel-controls button{display:grid;place-items:center;width:48px;height:48px;border:1px solid var(--line);border-radius:50%;background:var(--panel);color:var(--paper);font-size:24px;cursor:pointer}
+.project-carousel-controls button:hover:not(:disabled){border-color:var(--red);background:var(--red)}
+.project-carousel-controls button:focus-visible{outline:3px solid var(--paper);outline-offset:4px}
+.project-carousel-controls button:disabled{opacity:.35;cursor:default}
+@media(max-width:800px){.project-track{gap:22px;grid-auto-columns:calc((100% - 22px)/2)}}
+@media(max-width:600px){.project-track{grid-auto-columns:92%;gap:18px}.project-carousel-hint{max-width:190px;font-size:12px}.project-carousel-footer{gap:12px}}

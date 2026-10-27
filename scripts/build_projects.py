@@ -271,7 +271,15 @@ def _generate_locale(projects, registry, language='fr', translated_ids=None):
         note = '<div class="project-note"><p class="eyebrow">La suite se construit</p><h3>Explorer.<br>Expérimenter.<br>Partager.</h3><p>Cet espace évoluera au fil de mes projets. Chaque page permettra d’en découvrir le contexte, la démarche et les apprentissages.</p></div>'
         if english:
             note = '<div class="project-note"><p class="eyebrow">More to come</p><h3>Explore.<br>Experiment.<br>Share.</h3><p>This space will grow with my projects, sharing their context, approach and lessons learned.</p></div>'
-    output['en/index.html' if english else 'index.html'] = before + START + '\n' + '\n'.join(cards) + note + '\n' + END + after
+    carousel_template = Template((ROOT / 'templates/project-carousel.html').read_text(encoding='utf-8'))
+    carousel = carousel_template.substitute(
+        cards='\n'.join(cards),
+        gallery_label='Projects' if english else 'Projets',
+        previous_label='Previous projects' if english else 'Projets précédents',
+        next_label='Next projects' if english else 'Projets suivants',
+        hint='Swipe or use the arrows to explore' if english else 'Faites défiler pour découvrir les projets',
+        script_prefix='../' if english else '')
+    output['en/index.html' if english else 'index.html'] = before + START + '\n' + carousel + note + '\n' + END + after
     urls = [BASE] + [BASE + f'projets/{p["slug"]}.html' for p in projects]
     output['sitemap.xml'] = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + '\n'.join(f'  <url><loc>{xml_escape(url)}</loc></url>' for url in urls) + '\n</urlset>\n'
     identities = dict(registry.get('identities', {}))

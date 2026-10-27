@@ -89,3 +89,7 @@ Pour retirer un projet, supprimer sa fiche puis relancer la génération : seule
 ## Vérifications
 
 `python3 -m unittest discover -s tests` vérifie les erreurs de contenu, les numéros permanents, l’échappement, les chemins, les champs absents, le classement et les liens entre projets. `--check` vérifie que les sorties sont synchronisées. Avant publication, contrôler les cartes et pages à 375, 768 et 1440 px, les liens, le focus au clavier et le cadrage des visuels. Pas de texte coupé ou masqué pour satisfaire les limites.
+
+## Carrousel de l’accueil
+
+Les cartes sont générées dans `templates/project-carousel.html`. `assets/projects.css` organise une piste horizontale avec ancrage des cartes ; `assets/projects.js` ajoute les flèches, désactivées aux extrémités. Le défilement tactile et la barre native restent disponibles sans JavaScript. Au clavier : Tab pour accéder aux cartes et boutons, flèches gauche/droite et Début/Fin sur la piste. Aucune avance automatique ; les déplacements sont instantanés si la réduction des animations est activée. Ajouter un projet ne nécessite aucun changement au carrousel.
