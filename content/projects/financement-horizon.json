@@ -1,0 +1,220 @@
+{
+  "id": "financement-horizon",
+  "number": 3,
+  "slug": "financement-horizon",
+  "order": 30,
+  "title": "Horizon : financer la première phase de R&D",
+  "category": "Finance & innovation",
+  "status": "Terminé",
+  "role": "Structuration et pilotage du financement",
+  "domains": [
+    "Financement",
+    "Modélisation financière",
+    "R&D"
+  ],
+  "teaser": "500 000 $ de financement obtenus pour lancer la première phase d’Horizon, recruter une équipe de développement et soutenir la R&D de SmartPixel.",
+  "chapo": "J’ai structuré le dossier et mobilisé BDC et PME MTL pour obtenir 500 000 $ de financement pour Horizon, en articulant emprunt, investissement en R&D et réinvestissement des crédits d’impôt.",
+  "image": {
+    "src": "assets/projets/financement-horizon.webp",
+    "alt": "Illustration du projet Horizon : une Terre numérique éclairée par un lever de soleil, avec le nom Horizon.",
+    "width": 1600,
+    "height": 900,
+    "focal": [
+      50,
+      50
+    ]
+  },
+  "sections": {
+    "start": [
+      {
+        "type": "paragraph",
+        "text": "Horizon est un projet de recherche et développement mené sur plusieurs années chez SmartPixel. Il vise à faire évoluer les fondations technologiques de l’entreprise : un nouveau CMS, un environnement commun pour accueillir ses applications et une organisation davantage pilotée par les données."
+      },
+      {
+        "type": "paragraph",
+        "text": "L’objectif technique est de faciliter les modifications du code, l’ajout de fonctionnalités, les interventions et la maintenance des applications. Le projet comprend également une refonte du CMS destiné aux clients, avec une interface et une expérience utilisateur revues."
+      },
+      {
+        "type": "paragraph",
+        "text": "Une part importante d’Horizon porte aussi sur SmartPixel Web : un outil de présentation et de vente immobilière en 3D accessible directement dans un navigateur, sans installation. Il permet aux équipes commerciales, aux courtiers et aux acheteurs de découvrir un projet à distance à partir d’un simple lien."
+      },
+      {
+        "type": "paragraph",
+        "text": "Pour engager la première phase, SmartPixel devait financer les ressources de développement nécessaires tout en inscrivant cet investissement dans sa trajectoire financière."
+      }
+    ],
+    "objective": [
+      {
+        "type": "paragraph",
+        "text": "Obtenir 500 000 $ de financement pour soutenir cette première phase et recruter une équipe de développement."
+      },
+      {
+        "type": "paragraph",
+        "text": "Mon objectif était de rendre ce projet pluriannuel lisible pour les partenaires financiers : expliquer les besoins, ventiler les coûts, présenter les perspectives et démontrer comment l’investissement s’intégrait aux budgets de l’entreprise."
+      },
+      {
+        "type": "paragraph",
+        "text": "Le montage devait également articuler le financement emprunté avec les crédits d’impôt liés aux dépenses de R&D admissibles, afin de soutenir la poursuite du projet."
+      }
+    ],
+    "approach": [
+      {
+        "type": "paragraph",
+        "text": "Construire le dossier de bout en bout"
+      },
+      {
+        "type": "paragraph",
+        "text": "J’ai créé l’ensemble du dossier, depuis le narratif du projet jusqu’aux supports présentés aux partenaires. J’ai recherché et suscité l’intérêt de BDC et de PME MTL pour construire un montage financier autour d’Horizon."
+      },
+      {
+        "type": "paragraph",
+        "text": "J’ai présenté et expliqué les résultats des deux derniers exercices financiers ainsi que les résultats préliminaires disponibles, en les reliant aux besoins et aux perspectives du projet."
+      },
+      {
+        "type": "paragraph",
+        "text": "Modéliser les besoins et les scénarios"
+      },
+      {
+        "type": "paragraph",
+        "text": "J’ai ventilé les coûts et préparé les projections des effets du financement et du projet sur nos budgets et nos revenus. Plusieurs scénarios ont été construits pour éclairer les échanges avec les partenaires et les décisions internes."
+      },
+      {
+        "type": "paragraph",
+        "text": "Ce travail permettait de relier les ressources à engager, le calendrier de développement et les hypothèses financières dans une présentation cohérente."
+      },
+      {
+        "type": "paragraph",
+        "text": "Construire un levier de réinvestissement"
+      },
+      {
+        "type": "paragraph",
+        "text": "J’ai intégré au montage la complémentarité entre emprunt et crédits d’impôt R&D : le financement permet d’engager les dépenses de développement, dont la part admissible peut générer des crédits d’impôt destinés à être réinjectés dans le projet."
+      },
+      {
+        "type": "paragraph",
+        "text": "Ce levier inscrit le financement initial dans une logique de continuité, au service d’un programme de R&D mené sur plusieurs années."
+      }
+    ],
+    "outcome": [
+      {
+        "type": "paragraph",
+        "text": "Le montage a permis d’obtenir 500 000 $ de financement pour la première phase d’Horizon. Ce financement a servi à recruter une équipe de développement pour faire avancer le projet."
+      },
+      {
+        "type": "paragraph",
+        "text": "Ma contribution a consisté à transformer une ambition technologique en un dossier finançable : structurer les besoins, expliquer les résultats, modéliser plusieurs scénarios et porter un argumentaire cohérent auprès des partenaires."
+      },
+      {
+        "type": "paragraph",
+        "text": "Le statut « Terminé » concerne l’obtention de ce financement. La suite porte sur la poursuite d’Horizon et le réinvestissement prévu des crédits d’impôt R&D, sous réserve des dépenses admissibles. Cette première phase constitue une étape du programme, sans préjuger de son achèvement."
+      }
+    ]
+  },
+  "highlight": {
+    "title": "500 000 $ de financement obtenus",
+    "text": "Première phase de R&D Horizon · SmartPixel"
+  },
+  "en": {
+    "title": "Horizon: financing the first R&D phase",
+    "category": "Finance & innovation",
+    "role": "Financing structure and leadership",
+    "domains": [
+      "Financing",
+      "Financial modelling",
+      "R&D"
+    ],
+    "teaser": "$500,000 in financing secured to launch Horizon’s first phase, recruit a development team and support research and development at SmartPixel.",
+    "chapo": "I built the financing case and engaged BDC and PME MTL to secure $500,000 for Horizon, linking borrowed funds, R&D investment and the planned reinvestment of tax credits.",
+    "image_alt": "Horizon project illustration: a digital Earth illuminated by a sunrise, with the name Horizon.",
+    "sections": {
+      "start": [
+        {
+          "type": "paragraph",
+          "text": "Horizon is a multi-year research and development project at SmartPixel. It aims to modernize the company’s technology foundations through a new CMS, a shared environment for its applications and a more data-driven approach."
+        },
+        {
+          "type": "paragraph",
+          "text": "The technical goal is to make code changes, new features, interventions and application maintenance easier. The project also includes redesigning the client-facing CMS, with an improved interface and user experience."
+        },
+        {
+          "type": "paragraph",
+          "text": "A significant part of Horizon also involves SmartPixel Web: a browser-based 3D real estate presentation and sales tool that requires no installation. It allows sales teams, brokers and buyers to explore a development remotely through a simple link."
+        },
+        {
+          "type": "paragraph",
+          "text": "To launch the first phase, SmartPixel needed to fund development resources while aligning the investment with its financial plans."
+        }
+      ],
+      "objective": [
+        {
+          "type": "paragraph",
+          "text": "Secure $500,000 in financing to support this first phase and recruit a development team."
+        },
+        {
+          "type": "paragraph",
+          "text": "My objective was to make this multi-year project clear to financing partners: explain the needs, break down costs, present the outlook and demonstrate how the investment fitted into the company’s budgets."
+        },
+        {
+          "type": "paragraph",
+          "text": "The financing structure also needed to connect borrowed funds with tax credits on eligible R&D expenditures to support the project’s continuation."
+        }
+      ],
+      "approach": [
+        {
+          "type": "paragraph",
+          "text": "Building the complete financing case"
+        },
+        {
+          "type": "paragraph",
+          "text": "I built the entire dossier, from the project narrative to the materials presented to partners. I approached BDC and PME MTL and generated their interest in a financing structure for Horizon."
+        },
+        {
+          "type": "paragraph",
+          "text": "I presented and explained the results of the previous two financial years alongside the available preliminary results, connecting them to the project’s needs and outlook."
+        },
+        {
+          "type": "paragraph",
+          "text": "Modelling needs and scenarios"
+        },
+        {
+          "type": "paragraph",
+          "text": "I broke down costs and prepared projections of how the financing and project would affect our budgets and revenue. I developed several scenarios to inform discussions with partners and internal decisions."
+        },
+        {
+          "type": "paragraph",
+          "text": "This work brought together the resources required, the development timeline and the financial assumptions in a coherent presentation."
+        },
+        {
+          "type": "paragraph",
+          "text": "Creating a reinvestment mechanism"
+        },
+        {
+          "type": "paragraph",
+          "text": "I incorporated the relationship between borrowing and R&D tax credits into the financing structure: borrowed funds enable development expenditures, and the eligible portion may generate tax credits intended for reinvestment in the project."
+        },
+        {
+          "type": "paragraph",
+          "text": "This approach connects the initial financing to the continued funding needs of a multi-year R&D program."
+        }
+      ],
+      "outcome": [
+        {
+          "type": "paragraph",
+          "text": "The financing structure secured $500,000 for Horizon’s first phase. These funds supported the recruitment of a development team to move the project forward."
+        },
+        {
+          "type": "paragraph",
+          "text": "My contribution was to turn a technology ambition into a financeable case: structure the needs, explain the financial results, model several scenarios and present a coherent rationale to partners."
+        },
+        {
+          "type": "paragraph",
+          "text": "The “Completed” status refers to securing this financing. The next steps concern Horizon’s continued development and the planned reinvestment of R&D tax credits, subject to eligible expenditures. This first phase is one step in the program, rather than completion of the entire project."
+        }
+      ]
+    },
+    "highlight": {
+      "title": "$500,000 in financing secured",
+      "text": "Horizon’s first R&D phase · SmartPixel"
+    }
+  }
+}

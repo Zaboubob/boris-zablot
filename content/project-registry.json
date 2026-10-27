@@ -1,12 +1,15 @@
 {
   "identities": {
     "site-personnel": 1,
-    "subventions-2026": 2
+    "subventions-2026": 2,
+    "financement-horizon": 3
   },
   "pages": [
     "projets/site-personnel.html",
     "projets/subventions-2026.html",
+    "projets/financement-horizon.html",
     "en/projects/site-personnel.html",
-    "en/projects/subventions-2026.html"
+    "en/projects/subventions-2026.html",
+    "en/projects/financement-horizon.html"
   ]
 }
