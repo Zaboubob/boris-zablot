@@ -10,6 +10,8 @@ GitHub Pages depuis main / (root). Adresse : https://zaboubob.github.io/boris-za
 
 ## Ajouter un projet
 
+Le site dispose d’un accueil anglais sous `en/` et de pages projets anglaises sous `en/projects/`. Les traductions des projets se trouvent dans l’objet `en` de chaque fiche ; l’accueil anglais se modifie dans `templates/home-en.html`. Le sélecteur FR | EN relie les pages équivalentes.
+
 Remplir une fiche JSON dans `content/projects/` et fournir son visuel. Les modèles partagés génèrent les cartes et pages. Voir [le guide des projets](docs/PROJETS.md) et [la fiche prête à remplir](docs/projet-exemple.json).
 
 Commande : `python3 scripts/build_projects.py`. La génération est aussi intégrée au workflow GitHub, en conservant la publication Pages depuis main.

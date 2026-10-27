@@ -12,6 +12,7 @@ SPEC.loader.exec_module(build)
 class Projects(unittest.TestCase):
     def setUp(self):
         self.project = json.loads((build.ROOT / 'content/projects/site-personnel.json').read_text())
+        self.project.pop('en', None)
 
     def test_missing_duplicate_and_card_limits(self):
         p = copy.deepcopy(self.project)
@@ -85,6 +86,32 @@ class Projects(unittest.TestCase):
         self.assertEqual(current.split(build.START)[0], output['index.html'].split(build.START)[0])
         self.assertEqual(current.split(build.END)[1], output['index.html'].split(build.END)[1])
         self.assertIn(build.BASE + 'projets/site-personnel.html', output['sitemap.xml'])
+
+    def test_english_routes_metadata_and_switch(self):
+        projects = [json.loads(p.read_text()) for p in sorted((build.ROOT / 'content/projects').glob('*.json'))]
+        self.assertEqual(build.validate(projects, {})[0], [])
+        output = build.generate(projects, {})
+        self.assertIn('en/index.html', output)
+        for p in projects:
+            fr = output[f'projets/{p["slug"]}.html']
+            en = output[f'en/projects/{p["slug"]}.html']
+            self.assertIn('<html lang="en">', en)
+            self.assertIn(f'href="../../projets/{p["slug"]}.html"', en)
+            self.assertIn(f'href="../en/projects/{p["slug"]}.html"', fr)
+            self.assertIn('href="../../assets/style.css"', en)
+            self.assertIn('hreflang="fr"', en)
+            self.assertIn('hreflang="en"', fr)
+            self.assertIn(build.BASE + f'en/projects/{p["slug"]}.html', en)
+            self.assertIn('The starting point', en)
+            self.assertNotIn('Le point de départ', en)
+        self.assertIn('Project 002', output['en/index.html'])
+        self.assertIn('href="projects/subventions-2026.html"', output['en/index.html'])
+
+    def test_partial_english_translation_is_rejected(self):
+        p = copy.deepcopy(self.project)
+        p['en'] = {'title': 'A draft'}
+        errors, _ = build.validate([p], {})
+        self.assertTrue(any('champs anglais manquants' in e for e in errors))
 
 
 if __name__ == '__main__':

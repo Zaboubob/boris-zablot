@@ -73,5 +73,68 @@
         "text": "La suite consiste à enrichir cet espace au fil des projets, avec des explications concrètes sur leur contexte et leur développement. Le contenu pourra évoluer avec mes idées et mes apprentissages, en gardant une présentation homogène et facile à parcourir."
       }
     ]
+  },
+  "en": {
+    "title": "A space of my own",
+    "category": "Digital identity",
+    "teaser": "Building a website that extends my professional background, documents my projects and makes room for my ideas and what I learn along the way.",
+    "chapo": "Creating a personal space that brings together my experience in finance, my interest in technology and the projects I want to share, with the freedom to tell their stories in my own way.",
+    "image_alt": "Off-white BZ. monogram on a red background, the visual identity of Boris Zablot’s website",
+    "role": "Personal website creator",
+    "domains": [
+      "Digital identity",
+      "Finance",
+      "Technology"
+    ],
+    "sections": {
+      "start": [
+        {
+          "type": "paragraph",
+          "text": "LinkedIn tells part of my story, but a professional profile does not always leave room to explain what you are building. I wanted a space to present my experience and provide more context for the projects I choose to share."
+        },
+        {
+          "type": "paragraph",
+          "text": "My background in finance and my interest in technology are the starting point for this website. The idea is to bring them together in one place, while leaving room for the topics and lessons that come next."
+        }
+      ],
+      "objective": [
+        {
+          "type": "paragraph",
+          "text": "The goal is to create a personal website that extends my professional background without being limited to a résumé. Visitors should be able to understand my approach, explore my experience and discover my projects at their own pace."
+        },
+        {
+          "type": "paragraph",
+          "text": "Each project also needs a page of its own: a place to describe its context, explain the decisions behind it and share what comes out of it. The website itself is the first project presented here."
+        }
+      ],
+      "approach": [
+        {
+          "type": "paragraph",
+          "text": "The first step was to establish a consistent visual identity. Black-and-white portraits, a dark background, off-white text and red accents connect the different parts of the site."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Present my background and areas of expertise with a clear visual hierarchy.",
+            "Give projects visual cards and dedicated pages built around a consistent structure.",
+            "Keep the site lightweight, static, versioned on GitHub and suited to mobile screens."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Project content and presentation are now separate. A shared structure describes each project’s starting point, goal, approach and outcome. This makes it possible to expand the site without redesigning every new page."
+        }
+      ],
+      "outcome": [
+        {
+          "type": "paragraph",
+          "text": "The site now brings together my professional background, areas of expertise and a space for projects. It gives a structure to what I want to share and provides another way to discover my work alongside my LinkedIn profile."
+        },
+        {
+          "type": "paragraph",
+          "text": "The next step is to keep adding projects, with concrete explanations of their context and development. The content can evolve with my ideas and what I learn, while keeping the experience consistent and easy to explore."
+        }
+      ]
+    }
   }
 }

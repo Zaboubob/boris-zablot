@@ -1,0 +1,4 @@
+.language-switch{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;font-size:12px;letter-spacing:1px;padding-left:18px;border-left:1px solid #ffffff50}
+.language-switch a{padding:7px 0;color:var(--muted)}.language-switch a:hover{color:var(--paper);text-decoration:underline;text-underline-offset:5px}.language-switch [aria-current]{font-weight:700;color:var(--paper)}.language-switch span[aria-hidden]{color:#85858e}
+@media(max-width:900px){.header .navlinks{gap:16px}.language-switch{padding-left:12px;gap:6px}}
+@media(max-width:600px){.header .nav{height:auto;min-height:76px;display:grid;grid-template-columns:34px minmax(0,1fr);align-items:center;gap:14px;padding-block:14px}.header .navlinks{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px 14px}.language-switch{font-size:11px;padding-left:10px;gap:7px}.header .navlinks .linkedin{padding:5px 9px}}

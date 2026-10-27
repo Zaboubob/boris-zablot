@@ -1,5 +1,9 @@
 # Vérifications du modèle projets
 
+## Ajout de l’anglais
+
+Sept tests automatisés passent après l’ajout du bilingue. Ils incluent les routes françaises et anglaises, les URL canoniques, les liens FR | EN équivalents et le refus des traductions incomplètes. Les six pages (deux accueils et quatre pages projets) passent le contrôle des chemins locaux. L’accueil et la page subventions anglais ont été contrôlés à 375 px sans débordement, et l’accueil à 768 et 1440 px. Le changement de langue dans les deux sens sur une page projet a été activé dans le navigateur ; le lien français de l’accueil anglais conserve aussi l’ancre de section. Le visuel anglais des subventions affiche CAD 102,500.
+
 - Dépôt examiné : site statique, publication Pages depuis `main / (root)`, aucun `AGENTS.md` présent. Lecture du README et du guide avant modification.
 - Génération et `--check` réussis. Cinq tests automatisés réussis : champs obligatoires et limites, unicité, numéros permanents, champs facultatifs, échappement HTML/JSON, chemins d’images, ordre d’affichage et liens vers deux autres projets sans lien vers soi.
 - Rendu navigateur vérifié dans des fenêtres intégrées de largeur 375, 768 et 1440 px. Aucun débordement horizontal dans les pages et cartes contrôlées (largeurs utiles respectives 360, 753, 1425 px, hors barre de défilement de 15 px).

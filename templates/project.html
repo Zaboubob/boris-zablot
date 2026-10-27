@@ -1,25 +1,26 @@
 <!doctype html>
-<html lang="fr">
+<html lang="$language">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>$page_title</title>
   <meta name="description" content="$description"><meta name="theme-color" content="#17171e">
   <link rel="canonical" href="$canonical">
-  <meta property="og:type" content="article"><meta property="og:locale" content="fr_CA">
+  <meta property="og:type" content="article"><meta property="og:locale" content="$locale">
+  $alternate_links
   <meta property="og:title" content="$page_title"><meta property="og:description" content="$description">
   <meta property="og:url" content="$canonical"><meta property="og:image" content="$share_image">
   <meta property="og:image:alt" content="$share_alt"><meta property="og:image:width" content="$share_width"><meta property="og:image:height" content="$share_height">
   <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="$page_title">
   <meta name="twitter:description" content="$description"><meta name="twitter:image" content="$share_image">
-  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../assets/style.css"><link rel="stylesheet" href="../assets/projects.css">
+  <link rel="icon" href="${asset_prefix}assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="${asset_prefix}assets/style.css"><link rel="stylesheet" href="${asset_prefix}assets/projects.css"><link rel="stylesheet" href="${asset_prefix}assets/languages.css">
   <script type="application/ld+json">$structured_data</script>
 </head>
 <body class="project-page">
-<a class="skip" href="#contenu">Aller au contenu</a>
+<a class="skip" href="#contenu">$skip_label</a>
 <header class="header"><div class="nav shell">
-  <a class="wordmark" href="../" aria-label="Boris Zablot — Accueil">BZ<span>BORIS ZABLOT</span></a>
-  <nav class="navlinks" aria-label="Navigation principale"><a href="../#projets">← Tous les projets</a></nav>
+  <a class="wordmark" href="../" aria-label="$home_label">BZ<span>BORIS ZABLOT</span></a>
+  <nav class="navlinks" aria-label="$navigation_label"><a href="../#projets">$all_projects_label</a>$language_switch</nav>
 </div></header>
 <main id="contenu">
   <header class="project-intro shell">
@@ -28,15 +29,15 @@
   </header>
   <figure class="project-cover shell">$hero_image</figure>
   $facts
-  <article class="project-article" aria-label="Présentation du projet">
+  <article class="project-article" aria-label="$article_label">
     $article
     $additional_figure
     $highlight
   </article>
-  <nav class="project-end shell" aria-label="Continuer la découverte">
-    <a class="button" href="../#projets">Retour aux projets <span aria-hidden="true">↗</span></a>
+  <nav class="project-end shell" aria-label="$continue_label">
+    <a class="button" href="../#projets">$return_label <span aria-hidden="true">↗</span></a>
     $related
   </nav>
 </main>
-<footer><div class="shell"><span>Boris Zablot · Montréal</span><a href="../">Retour à l’accueil ↗</a></div></footer>
+<footer><div class="shell"><span>Boris Zablot · Montréal</span><a href="../">$back_home_label ↗</a></div></footer>
 </body></html>

@@ -5,6 +5,8 @@
   },
   "pages": [
     "projets/site-personnel.html",
-    "projets/subventions-2026.html"
+    "projets/subventions-2026.html",
+    "en/projects/site-personnel.html",
+    "en/projects/subventions-2026.html"
   ]
 }

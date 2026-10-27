@@ -1,5 +1,15 @@
 # Ajouter un projet
 
+## Versions française et anglaise
+
+Le français reste à la racine ; l’anglais se trouve sous `en/`. Chaque fiche peut contenir un objet `en` : `title`, `category`, `teaser`, `chapo`, `sections` et `image_alt` sont alors obligatoires. Traduire aussi `role`, `period`, `domains`, `highlight`, `additional_image` et `hero_image` lorsqu’ils sont présents en français. Les identifiants, numéro, ordre, statut métier et slug sont communs aux deux langues ; le statut et les libellés de navigation sont traduits automatiquement.
+
+`en.image_src` permet de fournir un visuel traduit de mêmes dimensions que le visuel français. Sinon, l’image est partagée et seul son texte alternatif est traduit. La fiche `subventions-2026.json` constitue un exemple bilingue complet.
+
+Les modèles partagés produisent `projets/<slug>.html` et `en/projects/<slug>.html`. Le sélecteur FR | EN relie exactement les pages équivalentes. Sans traduction, le projet n’est pas ajouté au catalogue anglais et le lien EN mène à ce catalogue plutôt qu’à une URL inexistante. Les fiches anglaises incomplètes bloquent la génération. Les URL canoniques, les liens `hreflang` et le sitemap sont générés pour chaque langue.
+
+L’accueil français reste dans `index.html`. Le contenu éditorial de l’accueil anglais se modifie dans `templates/home-en.html`, puis `python3 scripts/build_projects.py` régénère `en/index.html`. Les marqueurs `PROJECTS` y fonctionnent comme sur l’accueil français. Le script léger `assets/languages.js` conserve l’ancre de section lors d’un changement de langue sur l’accueil ; les liens fonctionnent aussi sans JavaScript. Aucun visiteur n’est redirigé automatiquement selon son navigateur.
+
 Le contenu se trouve dans `content/projects/*.json`. Le générateur Python standard produit les cartes de l’accueil, les pages `projets/<slug>.html` et le sitemap. Les textes et liens sont présents dans le HTML : aucun JavaScript n’est nécessaire.
 
 ## En pratique

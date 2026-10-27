@@ -93,5 +93,89 @@
   "highlight": {
     "title": "102 500 $ CA de subventions obtenues",
     "text": "3 programmes : PSCE · ESSOR · CanExport"
+  },
+  "en": {
+    "title": "Grant funding applications 2026",
+    "category": "Finance",
+    "teaser": "Three successful applications securing CAD 102,500 in grants to support Active Media’s export development and digital transformation.",
+    "chapo": "From preparing the applications to financial projections and presentations, I led three grant requests to support Active Media’s international development and digital transformation.",
+    "image_alt": "Three approved grant applications illustrating the PSCE, CanExport and ESSOR programs in 2026.",
+    "image_src": "assets/projets/subventions-2026-en.webp",
+    "role": "End-to-end leadership of the applications",
+    "period": "Fiscal year 2026",
+    "sections": {
+      "start": [
+        {
+          "type": "paragraph",
+          "text": "Developing new markets and improving internal processes takes time and resources. For Active Media, the challenge was to identify the funding programs that matched these ambitions and build strong applications to secure them."
+        },
+        {
+          "type": "paragraph",
+          "text": "In 2026, I led three distinct initiatives: PSCE to support our commercial efforts in Europe, CanExport to support our development in Latin America, and ESSOR to prepare the company’s digital transformation."
+        }
+      ],
+      "objective": [
+        {
+          "type": "paragraph",
+          "text": "Secure grants directly tied to the company’s projects, supported by coherent budgets and a clear explanation of the planned activities. Each application needed to turn an ambition into a structured project: define the scope, model the expenses and explain the needs."
+        },
+        {
+          "type": "paragraph",
+          "text": "I led these efforts from preparing the applications through presentations and follow-up. For ESSOR, the work also included contributing to the assessment prepared with the selected consultant."
+        }
+      ],
+      "approach": [
+        {
+          "type": "paragraph",
+          "text": "PSCE — Supporting exports to Europe"
+        },
+        {
+          "type": "paragraph",
+          "text": "Prepared and presented in the second quarter of 2026, the PSCE application secured a CAD 47,500 grant. I modelled the project, prepared the financial information and supported its presentation."
+        },
+        {
+          "type": "paragraph",
+          "text": "This funding supports Active Media’s sales and marketing efforts in the European market. It contributes in particular to salary expenses associated with business development."
+        },
+        {
+          "type": "paragraph",
+          "text": "ESSOR — Preparing for digital transformation"
+        },
+        {
+          "type": "paragraph",
+          "text": "The first ESSOR component secured CAD 20,000 to support the company’s digital transformation process."
+        },
+        {
+          "type": "paragraph",
+          "text": "Beyond preparing the application and financial projections, I contributed to an assessment of approximately 100 pages with the selected consultant. This work reviews the company’s processes and tools, identifies areas for improvement and recommends ways to develop the solutions in use."
+        },
+        {
+          "type": "paragraph",
+          "text": "CanExport — Supporting development in Latin America"
+        },
+        {
+          "type": "paragraph",
+          "text": "A third application, focused on Active Media’s development in Latin America, secured CAD 35,000 through CanExport. It supports an export initiative in a market distinct from the European project."
+        }
+      ],
+      "outcome": [
+        {
+          "type": "paragraph",
+          "text": "Together, these three applications secured CAD 102,500 in grants to support two concrete priorities: international development and digital transformation."
+        },
+        {
+          "type": "paragraph",
+          "text": "They illustrate an operational dimension of my role in finance: identifying relevant programs, structuring projects, preparing projections and seeing applications through to completion."
+        },
+        {
+          "type": "paragraph",
+          "text": "The next step is an application for ESSOR’s second component, building on the assessment. This application is still in progress, and any potential funding is not included in the amount presented here."
+        }
+      ]
+    },
+    "highlight": {
+      "title": "CAD 102,500 in grants secured",
+      "text": "3 programs: PSCE · ESSOR · CanExport"
+    }
   }
 }
