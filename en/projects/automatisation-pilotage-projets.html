@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Automating project performance monitoring — A project by Boris Zablot</title>
+  <meta name="description" content="I led the redesign of project monitoring at SmartPixel, bringing commercial, operational and accounting data together in a shared environment for financial management."><meta name="theme-color" content="#17171e">
+  <link rel="canonical" href="https://zaboubob.github.io/boris-zablot/en/projects/automatisation-pilotage-projets.html">
+  <meta property="og:type" content="article"><meta property="og:locale" content="en_CA">
+  <link rel="alternate" hreflang="fr" href="https://zaboubob.github.io/boris-zablot/projets/automatisation-pilotage-projets.html"><link rel="alternate" hreflang="en" href="https://zaboubob.github.io/boris-zablot/en/projects/automatisation-pilotage-projets.html"><link rel="alternate" hreflang="x-default" href="https://zaboubob.github.io/boris-zablot/projets/automatisation-pilotage-projets.html">
+  <meta property="og:title" content="Automating project performance monitoring — A project by Boris Zablot"><meta property="og:description" content="I led the redesign of project monitoring at SmartPixel, bringing commercial, operational and accounting data together in a shared environment for financial management.">
+  <meta property="og:url" content="https://zaboubob.github.io/boris-zablot/en/projects/automatisation-pilotage-projets.html"><meta property="og:image" content="https://zaboubob.github.io/boris-zablot/assets/projets/automatisation-pilotage-projets-en.png">
+  <meta property="og:image:alt" content="Sales, production and accounting data converge into a consolidated base to monitor margins, progress and workload."><meta property="og:image:width" content="1600"><meta property="og:image:height" content="900">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Automating project performance monitoring — A project by Boris Zablot">
+  <meta name="twitter:description" content="I led the redesign of project monitoring at SmartPixel, bringing commercial, operational and accounting data together in a shared environment for financial management."><meta name="twitter:image" content="https://zaboubob.github.io/boris-zablot/assets/projets/automatisation-pilotage-projets-en.png">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../assets/style.css"><link rel="stylesheet" href="../../assets/projects.css"><link rel="stylesheet" href="../../assets/languages.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CreativeWork", "name": "Automating project performance monitoring", "description": "I led the redesign of project monitoring at SmartPixel, bringing commercial, operational and accounting data together in a shared environment for financial management.", "url": "https://zaboubob.github.io/boris-zablot/en/projects/automatisation-pilotage-projets.html", "image": "https://zaboubob.github.io/boris-zablot/assets/projets/automatisation-pilotage-projets-en.png", "inLanguage": "en", "author": {"@type": "Person", "name": "Boris Zablot"}}</script>
+</head>
+<body class="project-page">
+<a class="skip" href="#contenu">Skip to content</a>
+<header class="header"><div class="nav shell">
+  <a class="wordmark" href="../" aria-label="Boris Zablot — Home">BZ<span>BORIS ZABLOT</span></a>
+  <nav class="navlinks" aria-label="Main navigation"><a href="../#projets">← All projects</a><span class="language-switch" aria-label="Langue / Language"><a lang="fr" hreflang="fr" href="../../projets/automatisation-pilotage-projets.html" aria-label="Lire cette page en français">FR</a><span aria-hidden="true">|</span><span lang="en" aria-current="page">EN</span></span></nav>
+</div></header>
+<main id="contenu">
+  <header class="project-intro shell">
+    <p class="project-kicker"><span>Project 004</span><span>Data &amp; automation</span><span class="project-status">Completed</span></p>
+    <h1>Automating project performance monitoring</h1><p class="project-deck">I led the redesign of project monitoring at SmartPixel, bringing commercial, operational and accounting data together in a shared environment for financial management.</p>
+  </header>
+  <figure class="project-cover shell"><img src="../../assets/projets/automatisation-pilotage-projets-en.png" alt="Sales, production and accounting data converge into a consolidated base to monitor margins, progress and workload." width="1600" height="900" fetchpriority="high" decoding="async" style="object-position:50% 50%"></figure>
+  <dl class="project-facts shell"><div><dt>My role</dt><dd>Leading the redesign and structuring performance indicators</dd></div><div><dt>Tools & areas</dt><dd>Jira · Tempo · Coupler.io · QuickBooks · HubSpot</dd></div></dl>
+  <article class="project-article" aria-label="About this project">
+    <section aria-labelledby="section-start"><h2 id="section-start">The starting point</h2><p>Project monitoring relied on a metrics system disconnected from our production environment. Working time was recorded in Tempo, alongside Jira, while commercial information, invoices and expenses were spread across several tools and files.</p>
+<p>This fragmentation made it difficult to reconcile what had been sold, what was actually being produced, and what had been invoiced or collected. Understanding a project’s financial position required piecing this information together.</p></section>
+<section aria-labelledby="section-objective"><h2 id="section-objective">The goal</h2><p>Build a consolidated view of each project, connecting commercial commitments with operational execution and accounting data.</p>
+<p>I wanted a single environment to track hours used, costs, billing and collections, while anticipating remaining work and profitability at completion.</p></section>
+<section aria-labelledby="section-approach"><h2 id="section-approach">The approach</h2><p>Connecting sources and structuring data flows</p>
+<p>I led the implementation of integration flows connecting production, sales and accounting data. Time entries from Tempo are retrieved through token-authenticated access using Coupler.io data flows, then loaded into a raw-data sheet.</p>
+<p>A master file consolidates these records with data from QuickBooks, HubSpot, accounting tracking files and sales calculators. The data is then filtered, matched and aggregated into a project-level management view.</p>
+<p>Reconciling sold hours, actual work and remaining effort</p>
+<p>The system compares hours sold, including 3D and programming work, with time actually recorded in production. Detailed time entries make it possible to trace contributions by person, project and Jira task, and check timesheet completeness.</p>
+<p>Estimating the remaining effort is the main management input entered manually. Combined with actual hours, it provides an estimate of hours at completion and a progress measure based on production effort.</p>
+<p>Reconstructing each project’s economics</p>
+<p>I structured the indicators to match revenue with labour costs, subcontracting and external purchases allocated to projects.</p>
+<p>The same view includes billing milestones, amounts invoiced, upcoming billing stages and payments received. It distinguishes production progress from billing progress and cash collections.</p>
+<p>Anticipating future workload</p>
+<p>Combining hour volumes with delivery dates also allows production workload to be projected by period. Monitoring becomes a tool for anticipating capacity requirements and informing trade-offs.</p></section>
+<section aria-labelledby="section-outcome"><h2 id="section-outcome">Results &amp; next steps</h2><p>This redesign turned scattered records into consolidated, traceable management information that can be used at project level.</p>
+<p>It helps explain differences between sales assumptions and execution, track costs and margins, identify billing stages and project future workload.</p>
+<p>My contribution was to connect finance and production needs: define the information required, structure its reconciliation and build a shared understanding of project performance.</p></section>
+    
+    <aside class="project-highlight"><h2>From sales to delivery: one shared view of every project.</h2><p>Hours · Costs · Margins · Billing · Collections · Forecast workload</p></aside>
+  </article>
+  <nav class="project-end shell" aria-label="Keep exploring">
+    <a class="button" href="../#projets">Back to projects <span aria-hidden="true">↗</span></a>
+    <div class="project-related"><h2>Explore another project</h2><div class="project-related-links"><a href="site-personnel.html"><span>A space of my own</span><span aria-hidden="true">↗</span></a><a href="subventions-2026.html"><span>Grant funding applications 2026</span><span aria-hidden="true">↗</span></a></div></div>
+  </nav>
+</main>
+<footer><div class="shell"><span>Boris Zablot · Montréal</span><a href="../">Back to home ↗</a></div></footer>
+</body></html>

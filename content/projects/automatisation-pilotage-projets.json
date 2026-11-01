@@ -1,0 +1,217 @@
+{
+  "id": "automatisation-pilotage-projets",
+  "number": 4,
+  "slug": "automatisation-pilotage-projets",
+  "order": 40,
+  "title": "Automatiser le pilotage des projets",
+  "category": "Data & automatisation",
+  "status": "Terminé",
+  "role": "Pilotage de la refonte et structuration des indicateurs",
+  "domains": [
+    "Jira",
+    "Tempo",
+    "Coupler.io",
+    "QuickBooks",
+    "HubSpot"
+  ],
+  "teaser": "Connecter ventes, production et comptabilité pour automatiser le suivi des projets, analyser leurs marges et anticiper la charge de travail.",
+  "chapo": "J’ai piloté la refonte du suivi des projets chez SmartPixel pour réunir les données commerciales, opérationnelles et comptables dans un environnement commun de pilotage financier.",
+  "image": {
+    "src": "assets/projets/automatisation-pilotage-projets.png",
+    "alt": "Les données des ventes, de la production et de la comptabilité convergent vers une base consolidée pour suivre les marges, l’avancement et la charge.",
+    "width": 1600,
+    "height": 900,
+    "focal": [
+      50,
+      50
+    ]
+  },
+  "sections": {
+    "start": [
+      {
+        "type": "paragraph",
+        "text": "Le suivi des projets reposait sur un système de métriques déconnecté de notre environnement de production. Les temps travaillés étaient saisis dans Tempo, associé à Jira, tandis que les informations commerciales, la facturation et les dépenses étaient réparties entre plusieurs outils et fichiers."
+      },
+      {
+        "type": "paragraph",
+        "text": "Cette fragmentation compliquait le rapprochement entre ce qui avait été vendu, ce qui était réellement produit et ce qui avait été facturé ou encaissé. Pour comprendre la situation économique d’un projet, il fallait reconstituer ces informations."
+      }
+    ],
+    "objective": [
+      {
+        "type": "paragraph",
+        "text": "Construire une vue consolidée par projet, reliant les engagements commerciaux à l’exécution opérationnelle et aux données comptables."
+      },
+      {
+        "type": "paragraph",
+        "text": "Je souhaitais disposer d’un même environnement pour suivre les heures consommées, les coûts, la facturation et les encaissements, tout en anticipant le travail restant et la rentabilité à terminaison."
+      }
+    ],
+    "approach": [
+      {
+        "type": "paragraph",
+        "text": "Connecter les sources et structurer les flux"
+      },
+      {
+        "type": "paragraph",
+        "text": "J’ai piloté la mise en place de flux d’intégration reliant les données de production, de vente et de comptabilité. Les temps saisis dans Tempo sont récupérés via un accès authentifié par jeton, au moyen des flux de données Coupler.io, puis intégrés à une feuille de données brutes."
+      },
+      {
+        "type": "paragraph",
+        "text": "Un fichier maître consolide ces informations avec les données de QuickBooks, de HubSpot, des fichiers de suivi comptable et des calculateurs commerciaux. Les données sont ensuite filtrées, rapprochées et agrégées pour constituer une vue de gestion par projet."
+      },
+      {
+        "type": "paragraph",
+        "text": "Rapprocher le vendu, le réalisé et le reste à faire"
+      },
+      {
+        "type": "paragraph",
+        "text": "Le système rapproche les heures vendues, notamment en 3D et en programmation, des heures effectivement saisies en production. Le détail des temps permet de retrouver les contributions par personne, par projet et par tâche Jira, et de contrôler la complétude des feuilles de temps."
+      },
+      {
+        "type": "paragraph",
+        "text": "L’estimation du travail restant constitue la principale donnée de pilotage à renseigner manuellement. Ajoutée aux heures déjà réalisées, elle permet de calculer une estimation des heures à terminaison et un avancement fondé sur l’effort de production."
+      },
+      {
+        "type": "paragraph",
+        "text": "Reconstituer l’économie de chaque projet"
+      },
+      {
+        "type": "paragraph",
+        "text": "J’ai structuré les indicateurs pour rapprocher les revenus du coût de la main-d’œuvre, de la sous-traitance et des achats externes affectés aux projets."
+      },
+      {
+        "type": "paragraph",
+        "text": "La même vue intègre les jalons de facturation, les montants facturés, les prochaines échéances et les paiements reçus. Elle permet ainsi de distinguer l’avancement de la production, l’avancement de la facturation et les encaissements."
+      },
+      {
+        "type": "paragraph",
+        "text": "Anticiper la charge à venir"
+      },
+      {
+        "type": "paragraph",
+        "text": "Le rapprochement des volumes d’heures et des dates de livraison permet également de projeter la charge de production par période. Le suivi devient un outil pour anticiper les besoins de capacité et éclairer les arbitrages."
+      }
+    ],
+    "outcome": [
+      {
+        "type": "paragraph",
+        "text": "Cette refonte a transformé des données dispersées en une information de gestion consolidée, traçable et exploitable à l’échelle de chaque projet."
+      },
+      {
+        "type": "paragraph",
+        "text": "Elle permet de mieux comprendre les écarts entre les hypothèses commerciales et l’exécution, de suivre les coûts et les marges, d’identifier les étapes de facturation et de projeter la charge de travail."
+      },
+      {
+        "type": "paragraph",
+        "text": "Mon apport a été de relier les besoins de la finance à ceux de la production : définir les informations utiles, structurer leur rapprochement et construire une lecture commune de la performance des projets."
+      }
+    ]
+  },
+  "highlight": {
+    "title": "Du vendu au réalisé, une lecture commune de chaque projet.",
+    "text": "Heures · Coûts · Marges · Facturation · Encaissements · Charge prévisionnelle"
+  },
+  "en": {
+    "title": "Automating project performance monitoring",
+    "category": "Data & automation",
+    "role": "Leading the redesign and structuring performance indicators",
+    "domains": [
+      "Jira",
+      "Tempo",
+      "Coupler.io",
+      "QuickBooks",
+      "HubSpot"
+    ],
+    "teaser": "Connecting sales, production and accounting to automate project monitoring, analyse margins and anticipate future production workload.",
+    "chapo": "I led the redesign of project monitoring at SmartPixel, bringing commercial, operational and accounting data together in a shared environment for financial management.",
+    "image_src": "assets/projets/automatisation-pilotage-projets-en.png",
+    "image_alt": "Sales, production and accounting data converge into a consolidated base to monitor margins, progress and workload.",
+    "sections": {
+      "start": [
+        {
+          "type": "paragraph",
+          "text": "Project monitoring relied on a metrics system disconnected from our production environment. Working time was recorded in Tempo, alongside Jira, while commercial information, invoices and expenses were spread across several tools and files."
+        },
+        {
+          "type": "paragraph",
+          "text": "This fragmentation made it difficult to reconcile what had been sold, what was actually being produced, and what had been invoiced or collected. Understanding a project’s financial position required piecing this information together."
+        }
+      ],
+      "objective": [
+        {
+          "type": "paragraph",
+          "text": "Build a consolidated view of each project, connecting commercial commitments with operational execution and accounting data."
+        },
+        {
+          "type": "paragraph",
+          "text": "I wanted a single environment to track hours used, costs, billing and collections, while anticipating remaining work and profitability at completion."
+        }
+      ],
+      "approach": [
+        {
+          "type": "paragraph",
+          "text": "Connecting sources and structuring data flows"
+        },
+        {
+          "type": "paragraph",
+          "text": "I led the implementation of integration flows connecting production, sales and accounting data. Time entries from Tempo are retrieved through token-authenticated access using Coupler.io data flows, then loaded into a raw-data sheet."
+        },
+        {
+          "type": "paragraph",
+          "text": "A master file consolidates these records with data from QuickBooks, HubSpot, accounting tracking files and sales calculators. The data is then filtered, matched and aggregated into a project-level management view."
+        },
+        {
+          "type": "paragraph",
+          "text": "Reconciling sold hours, actual work and remaining effort"
+        },
+        {
+          "type": "paragraph",
+          "text": "The system compares hours sold, including 3D and programming work, with time actually recorded in production. Detailed time entries make it possible to trace contributions by person, project and Jira task, and check timesheet completeness."
+        },
+        {
+          "type": "paragraph",
+          "text": "Estimating the remaining effort is the main management input entered manually. Combined with actual hours, it provides an estimate of hours at completion and a progress measure based on production effort."
+        },
+        {
+          "type": "paragraph",
+          "text": "Reconstructing each project’s economics"
+        },
+        {
+          "type": "paragraph",
+          "text": "I structured the indicators to match revenue with labour costs, subcontracting and external purchases allocated to projects."
+        },
+        {
+          "type": "paragraph",
+          "text": "The same view includes billing milestones, amounts invoiced, upcoming billing stages and payments received. It distinguishes production progress from billing progress and cash collections."
+        },
+        {
+          "type": "paragraph",
+          "text": "Anticipating future workload"
+        },
+        {
+          "type": "paragraph",
+          "text": "Combining hour volumes with delivery dates also allows production workload to be projected by period. Monitoring becomes a tool for anticipating capacity requirements and informing trade-offs."
+        }
+      ],
+      "outcome": [
+        {
+          "type": "paragraph",
+          "text": "This redesign turned scattered records into consolidated, traceable management information that can be used at project level."
+        },
+        {
+          "type": "paragraph",
+          "text": "It helps explain differences between sales assumptions and execution, track costs and margins, identify billing stages and project future workload."
+        },
+        {
+          "type": "paragraph",
+          "text": "My contribution was to connect finance and production needs: define the information required, structure its reconciliation and build a shared understanding of project performance."
+        }
+      ]
+    },
+    "highlight": {
+      "title": "From sales to delivery: one shared view of every project.",
+      "text": "Hours · Costs · Margins · Billing · Collections · Forecast workload"
+    }
+  }
+}
