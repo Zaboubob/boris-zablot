@@ -3,7 +3,7 @@
   "number": 4,
   "slug": "automatisation-pilotage-projets",
   "order": 40,
-  "title": "Automatiser le pilotage des projets",
+  "title": "Création d’un outil métrique de pilotage de projet",
   "category": "Data & automatisation",
   "status": "Terminé",
   "role": "Pilotage de la refonte et structuration des indicateurs",
@@ -113,7 +113,7 @@
     "text": "Heures · Coûts · Marges · Facturation · Encaissements · Charge prévisionnelle"
   },
   "en": {
-    "title": "Automating project performance monitoring",
+    "title": "Building a metrics tool for project management",
     "category": "Data & automation",
     "role": "Leading the redesign and structuring performance indicators",
     "domains": [
