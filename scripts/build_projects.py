@@ -229,7 +229,7 @@ def _generate_locale(projects, registry, language='fr', translated_ids=None):
         path = f'{directory}/{project["slug"]}.html'
         card_path = f'projects/{project["slug"]}.html' if english else path
         cards.append(card_template.substitute(**common, url=card_path, teaser=esc(project['teaser']), discover_label=labels['discover_label'],
-                                              image=render_image(project['image'], '../' if english else '', lazy=True)))
+                                              image=render_image(project['image'], '../' if english else '', lazy=False)))
         facts = []
         for label, value in [('My role' if english else 'Mon rôle', project.get('role')), ('Period' if english else 'Période', project.get('period')),
                              ('Tools & areas' if english else 'Outils & domaines', ' · '.join(project.get('domains') or []))]:
