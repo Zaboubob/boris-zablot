@@ -73,3 +73,11 @@
 .project-carousel-count{min-width:54px;text-align:center;font-size:14px;font-variant-numeric:tabular-nums;color:var(--paper)}
 @media(max-width:800px){#projets .project-track .project-content{padding:24px}#projets .project-track .project-card-media{min-height:320px}}
 @media(max-width:600px){#projets .project-track .project-card{grid-template-columns:1fr}#projets .project-track .project-card-media{aspect-ratio:16/9;min-height:0}.project-carousel-controls{width:100%;justify-content:space-between;gap:8px}.project-carousel-controls button{padding:10px 12px}.project-carousel-hint{max-width:none}}
+
+/* Keep thumbnail images in normal flow, including on mobile Safari. */
+#projets .project-carousel{max-width:860px;margin-inline:auto}
+#projets .project-track .project-card{display:flex;flex-direction:column}
+#projets .project-track .project-card-media{display:block;width:100%;height:auto;min-height:0;aspect-ratio:16/9;flex:none}
+#projets .project-track .project-card-media img{position:static;display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+#projets .project-track .project-content{width:100%;padding:28px}
+@media(max-width:600px){#projets .project-track .project-content{padding:22px}}
