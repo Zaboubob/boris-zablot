@@ -200,5 +200,100 @@
       "title": "$500,000 in financing secured",
       "text": "Horizon’s first R&D phase · SmartPixel"
     }
+  },
+  "es": {
+    "title": "Horizon: financiar la primera fase de I+D",
+    "category": "Finanzas e innovación",
+    "teaser": "500 000 $ de financiación obtenidos para iniciar la primera fase de Horizon, contratar un equipo de desarrollo y apoyar la I+D de SmartPixel.",
+    "chapo": "Estructuré el expediente y movilicé a BDC y PME MTL para obtener 500 000 $ para Horizon, combinando deuda, inversión en I+D y la reinversión prevista de créditos fiscales.",
+    "image_alt": "Ilustración del proyecto Horizon: una Tierra digital iluminada por un amanecer, con el nombre Horizon.",
+    "role": "Estructuración y gestión de la financiación",
+    "domains": [
+      "Financiación",
+      "Modelización financiera",
+      "I+D"
+    ],
+    "highlight": {
+      "title": "500 000 $ de financiación obtenidos",
+      "text": "Primera fase de I+D de Horizon · SmartPixel"
+    },
+    "sections": {
+      "start": [
+        {
+          "type": "paragraph",
+          "text": "Horizon es un proyecto de investigación y desarrollo de varios años en SmartPixel. Busca modernizar las bases tecnológicas de la empresa: un nuevo CMS, un entorno común para sus aplicaciones y una organización más orientada por los datos."
+        },
+        {
+          "type": "paragraph",
+          "text": "El objetivo técnico es facilitar los cambios de código, la incorporación de funciones, las intervenciones y el mantenimiento de las aplicaciones. El proyecto incluye también una renovación del CMS para los clientes, con una interfaz y una experiencia de usuario mejoradas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Una parte importante de Horizon corresponde a SmartPixel Web: una herramienta de presentación y venta inmobiliaria en 3D accesible directamente desde un navegador, sin instalación. Permite a los equipos comerciales, agentes y compradores explorar un proyecto a distancia mediante un simple enlace."
+        },
+        {
+          "type": "paragraph",
+          "text": "Para iniciar la primera fase, SmartPixel necesitaba financiar los recursos de desarrollo e integrar la inversión en su planificación financiera."
+        }
+      ],
+      "objective": [
+        {
+          "type": "paragraph",
+          "text": "Obtener 500 000 $ de financiación para apoyar esta primera fase y contratar un equipo de desarrollo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mi objetivo era hacer comprensible este proyecto plurianual para los socios financieros: explicar las necesidades, desglosar los costes, presentar las perspectivas y demostrar cómo encajaba la inversión en los presupuestos de la empresa."
+        },
+        {
+          "type": "paragraph",
+          "text": "La estructura también debía combinar los fondos prestados con los créditos fiscales vinculados a los gastos de I+D elegibles, para apoyar la continuidad del proyecto."
+        }
+      ],
+      "approach": [
+        {
+          "type": "paragraph",
+          "text": "Estructurar la financiación y movilizar a los socios"
+        },
+        {
+          "type": "paragraph",
+          "text": "Dirigí la elaboración integral del expediente de financiación de Horizon, desde la tesis de inversión hasta su traducción financiera. Inicié y conduje las conversaciones con BDC y PME MTL, construyendo un argumento que vinculaba el desempeño histórico, los resultados financieros recientes, la capacidad de ejecución y el potencial económico del programa de I+D."
+        },
+        {
+          "type": "paragraph",
+          "text": "Modelizar las necesidades y asegurar la trayectoria financiera"
+        },
+        {
+          "type": "paragraph",
+          "text": "Desarrollé un modelo financiero que incorporaba el desglose de inversiones, las necesidades de tesorería, las proyecciones presupuestarias y las perspectivas de ingresos. El análisis de varios escenarios y sus sensibilidades permitió evaluar el impacto de la financiación sobre el equilibrio financiero de la empresa, alineando los compromisos de capital con las distintas fases de desarrollo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Diseñar un apalancamiento financiero sostenible"
+        },
+        {
+          "type": "paragraph",
+          "text": "Estructuré la operación en torno a la complementariedad entre deuda y créditos fiscales de I+D. El objetivo: movilizar de inmediato el capital necesario para el desarrollo y después reinvertir los créditos generados por los gastos elegibles en las siguientes fases del programa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Este enfoque busca maximizar la capacidad de inversión, optimizar el uso del capital e inscribir Horizon en una trayectoria de financiación plurianual."
+        }
+      ],
+      "outcome": [
+        {
+          "type": "paragraph",
+          "text": "La operación permitió obtener 500 000 $ para la primera fase de Horizon. Esta financiación sirvió para contratar un equipo de desarrollo y hacer avanzar el proyecto."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mi contribución consistió en transformar una ambición tecnológica en un expediente financiable: estructurar las necesidades, explicar los resultados, modelizar varios escenarios y presentar argumentos coherentes a los socios."
+        },
+        {
+          "type": "paragraph",
+          "text": "El estado «Finalizado» se refiere a la obtención de esta financiación. Los siguientes pasos son continuar Horizon y reinvertir los créditos fiscales de I+D previstos, sujetos a los gastos elegibles. Esta primera fase es una etapa del programa, sin implicar que esté terminado en su conjunto."
+        }
+      ]
+    }
   }
 }

@@ -93,3 +93,7 @@ Pour retirer un projet, supprimer sa fiche puis relancer la génération : seule
 ## Carrousel de l’accueil
 
 Un seul projet est affiché par diapositive, avec son visuel et son texte côte à côte sur ordinateur et empilés sur mobile. Les cartes sont générées dans `templates/project-carousel.html`. `assets/projects.css` organise une piste horizontale avec ancrage des cartes ; `assets/projects.js` ajoute des boutons Précédent/Suivant au-dessus du visuel, un compteur et une navigation en boucle. Le défilement tactile et la barre native restent disponibles sans JavaScript. Au clavier : Tab pour accéder aux cartes et boutons, flèches gauche/droite et Début/Fin sur la piste. Aucune avance automatique ; les déplacements sont instantanés si la réduction des animations est activée. Ajouter un projet ne nécessite aucun changement au carrousel.
+
+## Version espagnole
+
+L’accueil espagnol se modifie dans `templates/home-es.html`. Chaque projet contient un objet `es` avec les mêmes champs obligatoires et facultatifs traduits que `en`. `es.image_src` permet un visuel traduit. La génération produit `es/index.html` et `es/projects/<slug>.html`, avec sélecteur FR | EN | ES, métadonnées et sitemap multilingues. Traduire tous les paragraphes, listes, textes alternatifs et encadrés ; une traduction partielle bloque la validation. Les numéros et slugs restent communs aux langues.

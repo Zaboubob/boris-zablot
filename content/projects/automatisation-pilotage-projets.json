@@ -213,5 +213,107 @@
       "title": "From sales to delivery: one shared view of every project.",
       "text": "Hours · Costs · Margins · Billing · Collections · Forecast workload"
     }
+  },
+  "es": {
+    "title": "Creación de una herramienta de gestión de proyectos",
+    "category": "Datos y automatización",
+    "teaser": "Conectar ventas, producción y contabilidad para automatizar el seguimiento de proyectos, analizar sus márgenes y anticipar la carga de trabajo.",
+    "chapo": "Dirigí la renovación del seguimiento de proyectos en SmartPixel para reunir los datos comerciales, operativos y contables en un entorno común de gestión financiera.",
+    "image_alt": "Los datos de ventas, producción y contabilidad convergen en una base consolidada para seguir los márgenes, el avance y la carga de trabajo.",
+    "image_src": "assets/projets/automatisation-pilotage-projets-es.png",
+    "role": "Dirección de la renovación y estructuración de indicadores",
+    "domains": [
+      "Jira",
+      "Tempo",
+      "Coupler.io",
+      "QuickBooks",
+      "HubSpot"
+    ],
+    "highlight": {
+      "title": "De lo vendido a lo realizado: una visión común de cada proyecto.",
+      "text": "Horas · Costes · Márgenes · Facturación · Cobros · Carga prevista"
+    },
+    "sections": {
+      "start": [
+        {
+          "type": "paragraph",
+          "text": "El seguimiento de proyectos se apoyaba en un sistema de métricas desconectado de nuestro entorno de producción. Las horas trabajadas se registraban en Tempo, asociado a Jira, mientras que la información comercial, la facturación y los gastos estaban repartidos entre varias herramientas y archivos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Esta fragmentación dificultaba conciliar lo vendido, lo realmente producido y lo facturado o cobrado. Para entender la situación económica de un proyecto, era necesario reconstruir esa información."
+        }
+      ],
+      "objective": [
+        {
+          "type": "paragraph",
+          "text": "Construir una visión consolidada por proyecto que conectara los compromisos comerciales con la ejecución operativa y los datos contables."
+        },
+        {
+          "type": "paragraph",
+          "text": "Quería disponer de un mismo entorno para seguir las horas consumidas, los costes, la facturación y los cobros, anticipando el trabajo pendiente y la rentabilidad al finalizar."
+        }
+      ],
+      "approach": [
+        {
+          "type": "paragraph",
+          "text": "Conectar las fuentes y estructurar los flujos"
+        },
+        {
+          "type": "paragraph",
+          "text": "Dirigí la implantación de flujos de integración que conectan los datos de producción, ventas y contabilidad. Los registros de tiempo de Tempo se recuperan mediante acceso autenticado por token a través de los flujos de Coupler.io y se integran en una hoja de datos brutos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Un archivo maestro consolida estos registros con datos de QuickBooks, HubSpot, los archivos de seguimiento contable y las calculadoras comerciales. Después, los datos se filtran, concilian y agregan para crear una visión de gestión por proyecto."
+        },
+        {
+          "type": "paragraph",
+          "text": "Conciliar lo vendido, lo realizado y el trabajo pendiente"
+        },
+        {
+          "type": "paragraph",
+          "text": "El sistema compara las horas vendidas, especialmente de 3D y programación, con las horas efectivamente registradas en producción. El detalle permite identificar las contribuciones por persona, proyecto y tarea de Jira, y comprobar que las hojas de tiempo estén completas."
+        },
+        {
+          "type": "paragraph",
+          "text": "La estimación del trabajo pendiente es el principal dato de gestión que se introduce manualmente. Sumada a las horas realizadas, permite estimar las horas totales al finalizar y calcular un avance basado en el esfuerzo de producción."
+        },
+        {
+          "type": "paragraph",
+          "text": "Reconstruir la economía de cada proyecto"
+        },
+        {
+          "type": "paragraph",
+          "text": "Estructuré los indicadores para relacionar los ingresos con el coste de la mano de obra, la subcontratación y las compras externas imputadas a los proyectos."
+        },
+        {
+          "type": "paragraph",
+          "text": "La misma vista incorpora los hitos de facturación, los importes facturados, las próximas etapas y los pagos recibidos. Así distingue entre el avance de producción, el de facturación y los cobros."
+        },
+        {
+          "type": "paragraph",
+          "text": "Anticipar la carga futura"
+        },
+        {
+          "type": "paragraph",
+          "text": "Relacionar los volúmenes de horas con las fechas de entrega también permite proyectar la carga de producción por período. El seguimiento se convierte en una herramienta para anticipar las necesidades de capacidad y orientar las decisiones."
+        }
+      ],
+      "outcome": [
+        {
+          "type": "paragraph",
+          "text": "Esta renovación transformó datos dispersos en información de gestión consolidada, trazable y utilizable a escala de cada proyecto."
+        },
+        {
+          "type": "paragraph",
+          "text": "Permite comprender mejor las diferencias entre las hipótesis comerciales y la ejecución, seguir los costes y los márgenes, identificar las etapas de facturación y proyectar la carga de trabajo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mi aportación fue conectar las necesidades de finanzas con las de producción: definir la información útil, estructurar su conciliación y construir una lectura común del desempeño de los proyectos."
+        }
+      ]
+    }
   }
 }

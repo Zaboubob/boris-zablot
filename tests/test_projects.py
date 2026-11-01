@@ -13,6 +13,7 @@ class Projects(unittest.TestCase):
     def setUp(self):
         self.project = json.loads((build.ROOT / 'content/projects/site-personnel.json').read_text())
         self.project.pop('en', None)
+        self.project.pop('es', None)
 
     def test_missing_duplicate_and_card_limits(self):
         p = copy.deepcopy(self.project)
@@ -111,7 +112,27 @@ class Projects(unittest.TestCase):
         p = copy.deepcopy(self.project)
         p['en'] = {'title': 'A draft'}
         errors, _ = build.validate([p], {})
-        self.assertTrue(any('champs anglais manquants' in e for e in errors))
+        self.assertTrue(any('champs en manquants' in e for e in errors))
+
+    def test_complete_spanish_routes_and_language_links(self):
+        projects = [json.loads(p.read_text()) for p in (build.ROOT / 'content/projects').glob('*.json')]
+        self.assertEqual(build.validate(projects, {})[0], [])
+        output = build.generate(projects, {})
+        self.assertIn('es/index.html', output)
+        for p in projects:
+            page = output[f'es/projects/{p["slug"]}.html']
+            self.assertIn('<html lang="es">', page)
+            self.assertIn('El punto de partida', page)
+            self.assertIn('Volver a los proyectos', page)
+            self.assertIn('Navegación principal', page)
+            for lang, directory in [('fr', 'projets'), ('en', 'en/projects'), ('es', 'es/projects')]:
+                self.assertIn(f'hreflang="{lang}"', page)
+                self.assertIn(build.BASE + f'{directory}/{p["slug"]}.html', output['sitemap.xml'])
+            self.assertIn(f'href="../../en/projects/{p["slug"]}.html"', page)
+            self.assertIn(f'href="../../projets/{p["slug"]}.html"', page)
+        p = copy.deepcopy(projects[0])
+        p['es'].pop('sections')
+        self.assertTrue(any('champs es manquants' in e for e in build.validate([p], {})[0]))
 
 
 if __name__ == '__main__':

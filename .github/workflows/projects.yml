@@ -16,6 +16,7 @@ on:
       - 'index.html'
       - 'projets/**'
       - 'en/**'
+      - 'es/**'
       - '.github/workflows/projects.yml'
   pull_request:
   workflow_dispatch:
@@ -60,7 +61,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          git add -A -- index.html projets en sitemap.xml content/project-registry.json
+          git add -A -- index.html projets en es sitemap.xml content/project-registry.json
           if ! git diff --cached --quiet; then
             git config user.name 'github-actions[bot]'
             git config user.email '41898282+github-actions[bot]@users.noreply.github.com'

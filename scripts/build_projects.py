@@ -153,8 +153,8 @@ def render_blocks(blocks):
     return '\n'.join(output)
 
 
-def localize(project):
-    translation = project['en']
+def localize(project, language='en'):
+    translation = project[language]
     localized = {key: project[key] for key in ('id', 'number', 'slug', 'order', 'status')}
     for key in ('title', 'category', 'teaser', 'chapo', 'sections'):
         localized[key] = translation[key]
@@ -169,42 +169,45 @@ def localize(project):
 
 def validate(projects, registry):
     errors, warnings = _validate_content(projects, registry)
-    for project in projects:
-        if 'en' not in project:
-            warnings.append(f'{project.get("id", "?")}: traduction anglaise absente, projet visible en français seulement')
-            continue
-        en = project['en']
-        if not isinstance(en, dict):
-            errors.append(f'{project.get("id", "?")}: en doit être un objet de traduction')
-            continue
-        missing = [k for k in ('title', 'category', 'teaser', 'chapo', 'sections', 'image_alt') if not en.get(k)]
-        missing += [k for k in ('role', 'period', 'domains', 'highlight', 'additional_image', 'hero_image') if project.get(k) and not en.get(k)]
-        if missing:
-            errors.append(f'{project.get("id", "?")}: champs anglais manquants : {", ".join(missing)}')
-            continue
-        e, w = _validate_content([localize(project)], {})
-        errors.extend('EN: ' + x for x in e)
-        warnings.extend('EN: ' + x for x in w)
+    for language in ('en', 'es'):
+        for project in projects:
+            if language not in project:
+                warnings.append(f'{project.get("id", "?")}: traduction {language} absente')
+                continue
+            translation = project[language]
+            if not isinstance(translation, dict):
+                errors.append(f'{project.get("id", "?")}: {language} doit être un objet')
+                continue
+            missing = [k for k in ('title', 'category', 'teaser', 'chapo', 'sections', 'image_alt') if not translation.get(k)]
+            missing += [k for k in ('role', 'period', 'domains', 'highlight', 'additional_image', 'hero_image') if project.get(k) and not translation.get(k)]
+            if missing:
+                errors.append(f'{project.get("id", "?")}: champs {language} manquants : {", ".join(missing)}')
+                continue
+            e, w = _validate_content([localize(project, language)], {})
+            errors.extend(language.upper() + ': ' + x for x in e)
+            warnings.extend(language.upper() + ': ' + x for x in w)
     return errors, warnings
 
 
-def language_switch(language, fr_href, en_href):
-    fr = '<span lang="fr" aria-current="page">FR</span>' if language == 'fr' else f'<a lang="fr" hreflang="fr" href="{esc(fr_href)}" aria-label="Lire cette page en français">FR</a>'
-    en = '<span lang="en" aria-current="page">EN</span>' if language == 'en' else f'<a lang="en" hreflang="en" href="{esc(en_href)}" aria-label="Read this page in English">EN</a>'
-    return '<span class="language-switch" aria-label="Langue / Language">' + fr + '<span aria-hidden="true">|</span>' + en + '</span>'
+def language_switch(language, fr_href, en_href, es_href=None):
+    links = []
+    for lang, href, label in [('fr', fr_href, 'Lire cette page en français'), ('en', en_href, 'Read this page in English'), ('es', es_href, 'Leer esta página en español')]:
+        if not href:
+            continue
+        links.append(f'<span lang="{lang}" aria-current="page">{lang.upper()}</span>' if language == lang else f'<a lang="{lang}" hreflang="{lang}" href="{esc(href)}" aria-label="{label}">{lang.upper()}</a>')
+    return '<span class="language-switch" aria-label="Langue / Language / Idioma">' + '<span aria-hidden="true">|</span>'.join(links) + '</span>'
 
 
-def alternates(fr_path, en_path=None):
-    links = f'<link rel="alternate" hreflang="fr" href="{BASE}{fr_path}">'
-    if en_path:
-        links += f'<link rel="alternate" hreflang="en" href="{BASE}{en_path}">'
+def alternates(fr_path, en_path=None, es_path=None):
+    links = ''.join(f'<link rel="alternate" hreflang="{lang}" href="{BASE}{path}">' for lang, path in [('fr', fr_path), ('en', en_path), ('es', es_path)] if path is not None)
     return links + f'<link rel="alternate" hreflang="x-default" href="{BASE}{fr_path}">'
 
 
 def _generate_locale(projects, registry, language='fr', translated_ids=None):
-    english = language == 'en'
+    english = language != 'fr'
+    spanish = language == 'es'
     prefix = '../../' if english else '../'
-    directory = 'en/projects' if english else 'projets'
+    directory = f'{language}/projects' if english else 'projets'
     sections = {'start': 'The starting point', 'objective': 'The goal', 'approach': 'The approach', 'outcome': 'Results & next steps'} if english else SECTION_NAMES
     labels = {
         'language': language, 'locale': 'en_CA' if english else 'fr_CA', 'asset_prefix': prefix,
@@ -218,6 +221,9 @@ def _generate_locale(projects, registry, language='fr', translated_ids=None):
         'return_label': 'Back to projects' if english else 'Retour aux projets',
         'back_home_label': 'Back to home' if english else 'Retour à l’accueil'
     }
+    if spanish:
+        sections = {'start': 'El punto de partida', 'objective': 'El objetivo', 'approach': 'El proceso', 'outcome': 'Balance y próximos pasos'}
+        labels.update(locale='es_CA', discover_label='Descubrir el proyecto', skip_label='Ir al contenido', home_label='Boris Zablot — Inicio', navigation_label='Navegación principal', all_projects_label='← Todos los proyectos', article_label='Presentación del proyecto', continue_label='Seguir explorando', return_label='Volver a los proyectos', back_home_label='Volver al inicio')
     card_template = Template((ROOT / 'templates/project-card.html').read_text(encoding='utf-8'))
     page_template = Template((ROOT / 'templates/project.html').read_text(encoding='utf-8'))
     cards, output = [], {}
@@ -225,14 +231,16 @@ def _generate_locale(projects, registry, language='fr', translated_ids=None):
         common = {k: esc(project[k]) for k in ('id', 'category', 'status', 'title')}
         if english:
             common['status'] = {'En cours': 'In progress', 'Terminé': 'Completed', 'En pause': 'On hold'}[project['status']]
-        common['number'] = f'{"Project" if english else "Projet"} {project["number"]:03d}'
+        if spanish:
+            common['status'] = {'En cours': 'En curso', 'Terminé': 'Finalizado', 'En pause': 'En pausa'}[project['status']]
+        common['number'] = f'{"Proyecto" if spanish else "Project" if english else "Projet"} {project["number"]:03d}'
         path = f'{directory}/{project["slug"]}.html'
         card_path = f'projects/{project["slug"]}.html' if english else path
         cards.append(card_template.substitute(**common, url=card_path, teaser=esc(project['teaser']), discover_label=labels['discover_label'],
                                               image=render_image(project['image'], '../' if english else '', lazy=False)))
         facts = []
-        for label, value in [('My role' if english else 'Mon rôle', project.get('role')), ('Period' if english else 'Période', project.get('period')),
-                             ('Tools & areas' if english else 'Outils & domaines', ' · '.join(project.get('domains') or []))]:
+        for label, value in [('Mi función' if spanish else 'My role' if english else 'Mon rôle', project.get('role')), ('Período' if spanish else 'Period' if english else 'Période', project.get('period')),
+                             ('Herramientas y ámbitos' if spanish else 'Tools & areas' if english else 'Outils & domaines', ' · '.join(project.get('domains') or []))]:
             if value:
                 facts.append(f'<div><dt>{label}</dt><dd>{esc(value)}</dd></div>')
         facts_html = '<dl class="project-facts shell">' + ''.join(facts) + '</dl>' if facts else ''
@@ -241,27 +249,30 @@ def _generate_locale(projects, registry, language='fr', translated_ids=None):
         related_html = ''
         if related:
             links = ''.join(f'<a href="{esc(p["slug"])}.html"><span>{esc(p["title"])}</span><span aria-hidden="true">↗</span></a>' for p in related)
-            related_html = '<div class="project-related"><h2>' + ('Explore another project' if english else 'À découvrir aussi') + '</h2><div class="project-related-links">' + links + '</div></div>'
+            related_html = '<div class="project-related"><h2>' + ('Descubre otros proyectos' if spanish else 'Explore another project' if english else 'À découvrir aussi') + '</h2><div class="project-related-links">' + links + '</div></div>'
         extra = project.get('additional_image')
         extra_html = '<figure class="project-extra">' + render_image(extra, prefix, True) + f'<figcaption>{esc(extra["caption"])}</figcaption></figure>' if extra else ''
         highlight = project.get('highlight')
         highlight_html = f'<aside class="project-highlight"><h2>{esc(highlight["title"])}</h2><p>{esc(highlight["text"])}</p></aside>' if highlight else ''
         hero = project.get('hero_image') or project['image']
-        title = project['title'] + (' — A project by Boris Zablot' if english else ' — Projet de Boris Zablot')
+        title = project['title'] + (' — Proyecto de Boris Zablot' if spanish else ' — A project by Boris Zablot' if english else ' — Projet de Boris Zablot')
         structured_data = json.dumps({'@context': 'https://schema.org', '@type': 'CreativeWork',
             'name': project['title'], 'description': project['chapo'], 'url': BASE + path,
             'image': BASE + hero['src'], 'inLanguage': language, 'author': {'@type': 'Person', 'name': 'Boris Zablot'}}, ensure_ascii=False).replace('<', '\\u003c')
-        translated = english or project['id'] in (translated_ids or set())
         fr_path = f'projets/{project["slug"]}.html'
         en_path = f'en/projects/{project["slug"]}.html'
-        switch = language_switch(language, '../../' + fr_path if english else project['slug'] + '.html', '../' + en_path if translated else '../en/#projets')
+        es_path = f'es/projects/{project["slug"]}.html'
+        available = translated_ids or {}
+        has_en = language == 'en' or project['id'] in available.get('en', set())
+        has_es = spanish or project['id'] in available.get('es', set())
+        switch = language_switch(language, prefix + fr_path, prefix + en_path if has_en else prefix + 'en/#projets', prefix + es_path if has_es else prefix + 'es/#projets')
         output[path] = page_template.substitute(**common, **labels, page_title=esc(title), language_switch=switch,
-            alternate_links=alternates(fr_path, en_path if translated else None),
+            alternate_links=alternates(fr_path, en_path if has_en else None, es_path if has_es else None),
             description=esc(project['chapo']), canonical=BASE+path, chapo=esc(project['chapo']),
             share_image=esc(BASE+hero['src']), share_alt=esc(hero['alt']), share_width=hero['width'], share_height=hero['height'],
             hero_image=render_image(hero, prefix), facts=facts_html, article=article, additional_figure=extra_html,
             highlight=highlight_html, related=related_html, structured_data=structured_data)
-    home = (ROOT / ('templates/home-en.html' if english else 'index.html')).read_text(encoding='utf-8')
+    home = (ROOT / (f'templates/home-{language}.html' if english else 'index.html')).read_text(encoding='utf-8')
     if home.count(START) != 1 or home.count(END) != 1:
         raise ValueError('index.html: les marqueurs PROJECTS sont absents ou en double')
     before, rest = home.split(START)
@@ -271,15 +282,17 @@ def _generate_locale(projects, registry, language='fr', translated_ids=None):
         note = '<div class="project-note"><p class="eyebrow">La suite se construit</p><h3>Explorer.<br>Expérimenter.<br>Partager.</h3><p>Cet espace évoluera au fil de mes projets. Chaque page permettra d’en découvrir le contexte, la démarche et les apprentissages.</p></div>'
         if english:
             note = '<div class="project-note"><p class="eyebrow">More to come</p><h3>Explore.<br>Experiment.<br>Share.</h3><p>This space will grow with my projects, sharing their context, approach and lessons learned.</p></div>'
+    if spanish and len(projects) == 1:
+        note = '<div class="project-note"><p class="eyebrow">La historia continúa</p><h3>Explorar.<br>Experimentar.<br>Compartir.</h3><p>Este espacio crecerá con mis proyectos, compartiendo su contexto, su proceso y sus aprendizajes.</p></div>'
     carousel_template = Template((ROOT / 'templates/project-carousel.html').read_text(encoding='utf-8'))
     carousel = carousel_template.substitute(
         cards='\n'.join(cards),
-        gallery_label='Projects' if english else 'Projets',
-        previous_label='Previous' if english else 'Précédent',
-        next_label='Next' if english else 'Suivant',
-        hint='Swipe or use the arrows to explore' if english else 'Faites défiler pour découvrir les projets',
+        gallery_label='Proyectos' if spanish else 'Projects' if english else 'Projets',
+        previous_label='Anterior' if spanish else 'Previous' if english else 'Précédent',
+        next_label='Siguiente' if spanish else 'Next' if english else 'Suivant',
+        hint='Desliza o usa las flechas para explorar' if spanish else 'Swipe or use the arrows to explore' if english else 'Faites défiler pour découvrir les projets',
         script_prefix='../' if english else '')
-    output['en/index.html' if english else 'index.html'] = before + START + '\n' + carousel + note + '\n' + END + after
+    output[f'{language}/index.html' if english else 'index.html'] = before + START + '\n' + carousel + note + '\n' + END + after
     urls = [BASE] + [BASE + f'projets/{p["slug"]}.html' for p in projects]
     output['sitemap.xml'] = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + '\n'.join(f'  <url><loc>{xml_escape(url)}</loc></url>' for url in urls) + '\n</urlset>\n'
     identities = dict(registry.get('identities', {}))
@@ -289,27 +302,26 @@ def _generate_locale(projects, registry, language='fr', translated_ids=None):
 
 
 def generate(projects, registry):
-    translated = [localize(p) for p in projects if p.get('en')]
-    output = _generate_locale(projects, registry, translated_ids={p['id'] for p in translated})
-    english = _generate_locale(translated, registry, 'en')
-    for path, content in english.items():
-        if path not in ('sitemap.xml', 'content/project-registry.json'):
-            output[path] = content
-    pairs = [('', 'en/')]
-    translated_ids = {p['id'] for p in translated}
-    pairs += [(f'projets/{p["slug"]}.html', f'en/projects/{p["slug"]}.html' if p['id'] in translated_ids else None) for p in projects]
+    translations = {lang: [localize(p, lang) for p in projects if p.get(lang)] for lang in ('en', 'es')}
+    available = {lang: {p['id'] for p in items} for lang, items in translations.items()}
+    output = _generate_locale(projects, registry, translated_ids=available)
+    for lang, items in translations.items():
+        for path, content in _generate_locale(items, registry, lang, available).items():
+            if path not in ('sitemap.xml', 'content/project-registry.json'):
+                output[path] = content
+    groups = [{'fr': '', 'en': 'en/', 'es': 'es/'}]
+    for p in projects:
+        groups.append({'fr': f'projets/{p["slug"]}.html', **{lang: f'{lang}/projects/{p["slug"]}.html' for lang in translations if p['id'] in available[lang]}})
     entries = []
-    for fr, en in pairs:
-        links = f'<xhtml:link rel="alternate" hreflang="fr" href="{BASE}{fr}"/>'
-        if en:
-            links += f'<xhtml:link rel="alternate" hreflang="en" href="{BASE}{en}"/>'
-        links += f'<xhtml:link rel="alternate" hreflang="x-default" href="{BASE}{fr}"/>'
-        for path in [fr] + ([en] if en else []):
+    for group in groups:
+        links = ''.join(f'<xhtml:link rel="alternate" hreflang="{lang}" href="{BASE}{path}"/>' for lang, path in group.items())
+        links += f'<xhtml:link rel="alternate" hreflang="x-default" href="{BASE}{group["fr"]}"/>'
+        for path in group.values():
             entries.append(f'  <url><loc>{xml_escape(BASE + path)}</loc>{links}</url>')
     output['sitemap.xml'] = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n' + '\n'.join(entries) + '\n</urlset>\n'
     identities = dict(registry.get('identities', {}))
     identities.update({p['id']: p['number'] for p in projects})
-    pages = [f'projets/{p["slug"]}.html' for p in projects] + [f'en/projects/{p["slug"]}.html' for p in translated]
+    pages = [f'projets/{p["slug"]}.html' for p in projects] + [f'{lang}/projects/{p["slug"]}.html' for lang, items in translations.items() for p in items]
     output['content/project-registry.json'] = json.dumps({'identities': identities, 'pages': pages}, ensure_ascii=False, indent=2) + '\n'
     return output
 
@@ -351,7 +363,7 @@ def main():
                 (ROOT / path).write_text(output[path], encoding='utf-8')
             for path in stale:
                 # Remove only known generated project pages, never arbitrary paths.
-                if re.fullmatch(r'(?:projets|en/projects)/[a-z0-9-]+\.html', path):
+                if re.fullmatch(r'(?:projets|en/projects|es/projects)/[a-z0-9-]+\.html', path):
                     (ROOT / path).unlink(missing_ok=True)
         print(f'OK : {len(projects)} projet(s), {len(changed)} fichier(s) à jour' if not args.check else 'OK : HTML généré synchronisé')
         return 0

@@ -25,3 +25,7 @@ Titres, descriptions, données Person / sameAs, URL canoniques, sitemap.xml, rob
 ## Polices
 Barlow et Barlow Condensed via Google Fonts, avec polices de secours locales.
 
+
+## Español
+
+Versión completa en `es/`, con cuatro proyectos en `es/projects/`. Las traducciones se mantienen en el objeto `es` de cada ficha y en `templates/home-es.html`. El selector FR | EN | ES conecta las páginas equivalentes.

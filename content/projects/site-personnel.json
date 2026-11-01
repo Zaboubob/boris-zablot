@@ -9,8 +9,8 @@
   "teaser": "Construire un site qui prolonge mon parcours professionnel, documente mes projets et donne une place à mes idées comme à mes apprentissages.",
   "chapo": "Créer un espace personnel pour relier mon expérience en finance, mon intérêt pour la technologie et les projets que je souhaite partager, avec la liberté de les raconter à ma façon.",
   "image": {
-    "src": "assets/projets/site-personnel-bz.png",
-    "alt": "Monogramme BZ. blanc cassé sur fond rouge, identité visuelle du site de Boris Zablot",
+    "src": "assets/projets/site-personnel-portrait.webp",
+    "alt": "Monogramme BZ. blanc cassé et portrait de Boris Zablot sur fond rouge.",
     "width": 1600,
     "height": 900,
     "focal": [
@@ -79,7 +79,7 @@
     "category": "Digital identity",
     "teaser": "Building a website that extends my professional background, documents my projects and makes room for my ideas and what I learn along the way.",
     "chapo": "Creating a personal space that brings together my experience in finance, my interest in technology and the projects I want to share, with the freedom to tell their stories in my own way.",
-    "image_alt": "Off-white BZ. monogram on a red background, the visual identity of Boris Zablot’s website",
+    "image_alt": "Off-white BZ. monogram and portrait of Boris Zablot on a red background.",
     "role": "Personal website creator",
     "domains": [
       "Digital identity",
@@ -133,6 +133,69 @@
         {
           "type": "paragraph",
           "text": "The next step is to keep adding projects, with concrete explanations of their context and development. The content can evolve with my ideas and what I learn, while keeping the experience consistent and easy to explore."
+        }
+      ]
+    }
+  },
+  "es": {
+    "title": "Un espacio con mi nombre",
+    "category": "Identidad digital",
+    "teaser": "Un sitio que amplía mi trayectoria profesional, documenta mis proyectos y da espacio a mis ideas y a lo que aprendo en el camino.",
+    "chapo": "Crear un espacio personal que reúna mi experiencia en finanzas, mi interés por la tecnología y los proyectos que quiero compartir, con la libertad de contarlos a mi manera.",
+    "image_alt": "Monograma BZ. en blanco roto y retrato de Boris Zablot sobre un fondo rojo.",
+    "role": "Creador del sitio personal",
+    "domains": [
+      "Identidad digital",
+      "Finanzas",
+      "Tecnología"
+    ],
+    "sections": {
+      "start": [
+        {
+          "type": "paragraph",
+          "text": "LinkedIn cuenta una parte de mi trayectoria, pero un perfil profesional no siempre permite explicar lo que uno construye. Quería disponer de un espacio para presentar mi experiencia y dar más contexto a los proyectos que elijo compartir."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mi trayectoria en finanzas y mi interés por la tecnología son el punto de partida de este sitio. La idea es reunirlos en un mismo espacio, dejando también lugar para los temas y aprendizajes que vendrán después."
+        }
+      ],
+      "objective": [
+        {
+          "type": "paragraph",
+          "text": "El objetivo es crear una presentación personal que amplíe mi trayectoria profesional sin limitarse a un currículum. Los visitantes deben poder comprender mi enfoque, recorrer mis experiencias y explorar mis proyectos a su propio ritmo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cada proyecto debe contar también con su propia página: un lugar para explicar su contexto, las decisiones tomadas y los resultados. El propio sitio es el primer proyecto presentado en este espacio."
+        }
+      ],
+      "approach": [
+        {
+          "type": "paragraph",
+          "text": "El primer paso fue definir una identidad visual común. Los retratos en blanco y negro, el fondo oscuro, el blanco roto y los acentos rojos dan continuidad a las distintas partes del sitio."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Presentar la trayectoria y los ámbitos de especialización con una jerarquía clara.",
+            "Dar a los proyectos tarjetas visuales y páginas propias con una estructura coherente.",
+            "Mantener una base estática ligera, versionada en GitHub y adaptada a dispositivos móviles."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "El contenido y la presentación de los proyectos están ahora separados. Una estructura compartida permite describir su punto de partida, su objetivo, su proceso y su balance. Esta organización permite ampliar el sitio sin rediseñar cada nueva página."
+        }
+      ],
+      "outcome": [
+        {
+          "type": "paragraph",
+          "text": "El sitio reúne hoy mi trayectoria, mis ámbitos de especialización y un espacio para los proyectos. Da estructura a lo que quiero compartir y ofrece una vía complementaria para conocer mi trabajo junto a mi perfil de LinkedIn."
+        },
+        {
+          "type": "paragraph",
+          "text": "El siguiente paso es seguir incorporando proyectos, con explicaciones concretas sobre su contexto y desarrollo. El contenido podrá evolucionar con mis ideas y aprendizajes, manteniendo una presentación homogénea y fácil de recorrer."
         }
       ]
     }
